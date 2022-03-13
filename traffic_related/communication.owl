@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/communication#"
+     xml:base="http://purl.org/auto/communication"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:communication="http://purl.org/auto/communication#">
+    <owl:Ontology rdf:about="http://purl.org/auto/communication"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/communication#delivered_from -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#delivered_from">
+        <owl:inverseOf rdf:resource="http://purl.org/auto/communication#delivers_signal"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Signal"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Sender"/>
+        <rdfs:label xml:lang="de">abgegeben_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#delivers_signal -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#delivers_signal">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Sender"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Signal"/>
+        <rdfs:label xml:lang="de">liefert_signal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#emits_noise -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#emits_noise">
+        <rdfs:label xml:lang="de">emittiert_geräusch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#has_messaging_target -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#has_messaging_target">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Message"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Receiver"/>
+        <rdfs:label xml:lang="de">hat_nachrichtenziel</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#interferes_with_channel -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#interferes_with_channel">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Noise"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Channel"/>
+        <rdfs:label xml:lang="de">interferiert_mit_kanal</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#is_received_by -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#is_received_by">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Signal"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Receiver"/>
+        <rdfs:label xml:lang="de">ist_empfangen_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#is_source_of_message -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#is_source_of_message">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Source_Of_Information"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Message"/>
+        <rdfs:label xml:lang="de">ist_nachrichtenquelle</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#transports_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#transports_to">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Channel"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Receiver"/>
+        <rdfs:label xml:lang="de">transportiert_zu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#wants_to_communicate_message -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#wants_to_communicate_message">
+        <rdfs:domain rdf:resource="http://purl.org/auto/communication#Sender"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/communication#Message"/>
+        <rdfs:label xml:lang="de">möchte_nachricht_kommunizieren</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/communication#Channel -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Channel">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#transports_to"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/communication#Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Kanal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Message -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Message">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#has_messaging_target"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/communication#Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Nachricht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Noise -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Noise">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#interferes_with_channel"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/communication#Channel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Rauschen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Receiver -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Receiver">
+        <rdfs:label xml:lang="de">Empfänger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Sender -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Sender">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#delivers_signal"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/communication#Signal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#wants_to_communicate_message"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/communication#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Sender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Signal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#is_received_by"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/communication#Receiver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Source">
+        <rdfs:label xml:lang="de">Quelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Source_Of_Information -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Source_Of_Information">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Source"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#is_source_of_message"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/communication#Message"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Informationsquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Source_Of_Interference -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Source_Of_Interference">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Source"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#emits_noise"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/communication#Noise"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Störungsquelle</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

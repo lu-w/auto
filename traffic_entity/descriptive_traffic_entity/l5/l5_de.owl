@@ -1,0 +1,1815 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l5_de#"
+     xml:base="http://purl.org/auto/l5_de"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:l5_de="http://purl.org/auto/l5_de#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l5_core="http://purl.org/auto/l5_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l5_de">
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l5_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l5_de#ground_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#ground_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:label xml:lang="de">boden_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_diffuse_solar_radiation_10min -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_diffuse_solar_radiation_10min">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_earthquake_magnitude -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_earthquake_magnitude">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#ground_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_de#Earthquake"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">M_L</physics:unit>
+        <rdfs:comment xml:lang="en">As measured on the local magnitude scale (&apos;Richter&apos; scale).</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_erdbebenstärke</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_elevantion -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_elevantion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Sun"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">m</physics:unit>
+        <rdfs:label xml:lang="de">hat_elevation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_longwave_downward_radiation_10min -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_longwave_downward_radiation_10min">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_new_snow_height -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_new_snow_height">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#precipication_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_de#Snow_Cover"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="de">hat_neuschnee_höhe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_precipitation_intensity -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_precipitation_intensity">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#precipication_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">mm/h</physics:unit>
+        <rdfs:label xml:lang="de">hat_niederschlagsintensität</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_precipitation_intensity_hourly -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_precipitation_intensity_hourly">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_precipitation_intensity_minute -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_precipitation_intensity_minute">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_solar_incoming_radiation_10min -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_solar_incoming_radiation_10min">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_sunshine_duration_10min -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_sunshine_duration_10min">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#has_wetness -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_wetness">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#precipication_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_core#Lane"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_core#Road"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,100]</physics:range>
+        <physics:unit xml:lang="en">%</physics:unit>
+        <rdfs:label xml:lang="de">hat_feuchtigkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#precipication_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#precipication_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:label xml:lang="de">niederschlag_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#sun_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#sun_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Sun"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_azimuth -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_azimuth">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Deposited_Precipitation -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Deposited_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">Equivalent to &apos;Road Weather&apos;.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Afterglow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Afterglow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Sky_Phenomenon"/>
+        <rdfs:label xml:lang="de">Abendrot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Alpenglow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Alpenglow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Sky_Phenomenon"/>
+        <rdfs:label xml:lang="de">Alpenglühen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Altocumulus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Altocumulus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Altostratus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Altostratus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Aquaplaning -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Aquaplaning">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Weather_Phenomenon"/>
+        <rdfs:label xml:lang="de">Aquaplaning</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Black_Ice -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Black_Ice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Ice"/>
+        <rdfs:label xml:lang="de">Glatteis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Blizzard -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Blizzard">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Whirled_Precipitation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Brocken_Spectre -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Brocken_Spectre">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:label xml:lang="de">Brockengespenst</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Cirrocumulus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Cirrocumulus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Cirrostratus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Cirrostratus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Cirrus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Cirrus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Closed_Snow_Cover -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Closed_Snow_Cover">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Snow_Cover"/>
+        <rdfs:label xml:lang="de">Geschlossene_Schneedecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Compacted_Snow_Cover -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Compacted_Snow_Cover">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Closed_Snow_Cover"/>
+        <rdfs:label xml:lang="de">Verfestigte_Schneedecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Cumulus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Cumulus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Cumulusnimbus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Cumulusnimbus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Dew -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Dew">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Set_Precipitation"/>
+        <rdfs:label xml:lang="de">Tau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Downpour -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Downpour">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+        <rdfs:label xml:lang="de">Platzregen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Dust_Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Dust_Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle"/>
+        <rdfs:label xml:lang="de">Staubpartikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Earthquake -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Earthquake">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Oscillation"/>
+        <rdfs:label xml:lang="de">Erdbeben</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Extremely_Heavy_Rain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Extremely_Heavy_Rain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+        <rdfs:label xml:lang="de">Extremer_Starkregen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Fire -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Fire">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Active_Illumination_Source"/>
+        <rdfs:label xml:lang="de">Feuer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Firefly_Glow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Firefly_Glow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Photochemical_Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Glühwürmchenleuchten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Fog -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Fog">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:label xml:lang="de">Nebel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Fog_Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Fog_Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle"/>
+        <rdfs:label xml:lang="de">Nebelpartikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Fogbow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Fogbow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:label xml:lang="de">Nebelbogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Freezing_Air -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Freezing_Air">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air"/>
+        <rdfs:label xml:lang="de">Eiskalte_Luft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Gale_Force_Wind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Gale_Force_Wind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Orkanböe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Green_Flash -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Green_Flash">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Grüner_Blitz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Gust -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Gust">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Wind_Phenomenon"/>
+        <rdfs:label xml:lang="de">Böe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Gust_Of_Wind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Gust_Of_Wind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Windböe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Hail -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Hail">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Falling_Precipitation"/>
+        <rdfs:label xml:lang="de">Hagel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Halo -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Halo">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Halo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Heat_Haze -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Heat_Haze">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Ground_Phenomenon"/>
+        <rdfs:label xml:lang="de">Hitzeflimmern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Heavy_Rain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Heavy_Rain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+        <rdfs:label xml:lang="de">Starkregen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Heavy_Snow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Heavy_Snow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+        <rdfs:label xml:lang="de">Starkschnee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Heavy_Squall -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Heavy_Squall">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Schwere_Sturmböe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Hoar -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Hoar">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Set_Precipitation"/>
+        <rdfs:label xml:lang="de">Reif</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Hurricane -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Hurricane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Whirlwind"/>
+        <rdfs:label xml:lang="de">Hurrikan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Ice -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Ice">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Deposited_Precipitation"/>
+        <rdfs:label xml:lang="de">Glätte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Light_Rain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Light_Rain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+        <rdfs:label xml:lang="de">Leichtregen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Light_Snow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Light_Snow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+        <rdfs:label xml:lang="de">Leichtschnee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Mirage -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Mirage">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Phenomenon"/>
+        <rdfs:label xml:lang="de">Luftspiegelung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Moderate_Rain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Moderate_Rain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+        <rdfs:label xml:lang="de">Moderater_Regen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Moderate_Snow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Moderate_Snow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+        <rdfs:label xml:lang="de">Moderater_Schnee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Moonbow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Moonbow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Moon_Phenomenon"/>
+        <rdfs:label xml:lang="de">Mondregenbogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Night_Environment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Night_Environment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environment"/>
+        <rdfs:comment xml:lang="en">Defined via SWRL rule.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nacht_Umwelt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Nimbostratus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Nimbostratus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#No_Gust_Wind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#No_Gust_Wind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Wind"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#has_environment_phenomenon"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Wind_Ohne_Böe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#No_Precipitation_Environment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#No_Precipitation_Environment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environment"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environment"/>
+        <rdfs:label xml:lang="de">Umwelt_Ohne_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#No_Snow_Cover_Environment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#No_Snow_Cover_Environment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environment"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_de#Snow_Cover"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environment"/>
+        <rdfs:label xml:lang="de">Umwelt_Ohne_Schneedecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#No_Spray_Ground -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#No_Spray_Ground">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Ground"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#has_environment_phenomenon"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_de#Spray"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Boden_Ohne_Gischt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Noctilucent_Cloud -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Noctilucent_Cloud">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud_Phenomenon"/>
+        <rdfs:label xml:lang="de">Nachtwolke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Oscillation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Oscillation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Ground_Phenomenon"/>
+        <rdfs:label xml:lang="de">Schwingung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Partial_Snow_Cover -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Partial_Snow_Cover">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Snow_Cover"/>
+        <rdfs:label xml:lang="de">Teilweise_Geschlossene_Schneedecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Photochemical_Light_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Photochemical_Light_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Photochemisches_Lichtphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Polar_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Polar_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Polarlicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Rain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Rain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Falling_Precipitation"/>
+        <rdfs:label xml:lang="de">Regen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Rain_Puddle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Rain_Puddle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Deposited_Precipitation"/>
+        <rdfs:label xml:lang="de">Regenpfütze</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Rainbow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Rainbow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Light_Phenomenon"/>
+        <rdfs:label xml:lang="de">Regenbogen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Red_Morning_Sky -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Red_Morning_Sky">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Sky_Phenomenon"/>
+        <rdfs:label xml:lang="de">Morgenrot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Rising_Steam -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Rising_Steam">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Ground_Phenomenon"/>
+        <rdfs:label xml:lang="de">Aufsteigender_Dampf</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Sand_Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Sand_Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle"/>
+        <rdfs:label xml:lang="de">Sandpartikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Sand_Storm -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Sand_Storm">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Storm"/>
+        <rdfs:label xml:lang="de">Sandsturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Severe_Gale_Force_Wind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Severe_Gale_Force_Wind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Extreme_Orkanböe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Smog -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Smog">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle_Phenomenon"/>
+        <rdfs:label xml:lang="de">Smog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Smog_Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Smog_Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Air_Particle"/>
+        <rdfs:label xml:lang="de">Smogpartikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Snow -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Snow">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Falling_Precipitation"/>
+        <rdfs:label xml:lang="de">Schnee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Snow_Cover -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Snow_Cover">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Deposited_Precipitation"/>
+        <rdfs:label xml:lang="de">Schneedecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Snowdrift -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Snowdrift">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Whirled_Precipitation"/>
+        <rdfs:label xml:lang="de">Schneeverwehung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Snowstorm -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Snowstorm">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Whirled_Precipitation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Storm"/>
+        <rdfs:label xml:lang="de">Schneesturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Spray -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Spray">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Ground_Phenomenon"/>
+        <rdfs:label xml:lang="de">Gischt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Squall -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Squall">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Sturmböe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Storm -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Storm">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Wind_Phenomenon"/>
+        <rdfs:label xml:lang="de">Sturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Stratocumulus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Stratocumulus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Stratus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Stratus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Sunbeam -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Sunbeam">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Sun_Phenomenon"/>
+        <rdfs:label xml:lang="de">Strahlenbüschel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Tornado -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Tornado">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Whirlwind"/>
+        <rdfs:label xml:lang="de">Tornado</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Typhoon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Typhoon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Whirlwind"/>
+        <rdfs:label xml:lang="de">Taifun</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Violent_Squall -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Violent_Squall">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Gust"/>
+        <rdfs:label xml:lang="de">Orkanartige_Böe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Water_Layer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Water_Layer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Deposited_Precipitation"/>
+        <rdfs:comment xml:lang="en">Has to have a non-zero height.</rdfs:comment>
+        <rdfs:label xml:lang="de">Wasserdecke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Water_Layer_With_Body_Of_Water -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Water_Layer_With_Body_Of_Water">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_de#Water_Layer"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/auto/l5_de#Rain_Puddle"/>
+                            <rdf:Description rdf:about="http://purl.org/auto/l5_de#Water_Stream"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Water_Layer"/>
+        <rdfs:label xml:lang="de">Wasserdecke_Mit_Pfützen_Und_Wasserläufen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Water_Stream -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Water_Stream">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Deposited_Precipitation"/>
+        <rdfs:label xml:lang="de">Wasserlauf</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_de#Whirlwind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_de#Whirlwind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_de#Storm"/>
+        <rdfs:label xml:lang="de">Wirbelsturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#u">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#l">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.org/auto/l5_de#h">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heavy snow</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Heavy_Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light snow</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Light_Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water layer has to have non-zero height</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Water Layer Height</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Water_Layer"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#l"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/physics#has_height"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#l"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#h"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                        <swrl:arguments>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#h"/>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freezing air</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_core#Air"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/physics#has_temperature"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#a"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#t"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Freezing_Air"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_core#Environment"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#u"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/physics#has_illuminance"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#u"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#i"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#i"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Night_Environment"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#u"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extremely heavy rain</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Moderate_Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heavy rain</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Heavy_Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate rain</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Moderate_Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light rain</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Light_Rain"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moderate snow</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://purl.org/auto/l5_de#has_precipitation_intensity"/>
+                                <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                                <swrl:argument2 rdf:resource="http://purl.org/auto/l5_de#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                <swrl:arguments>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:resource="http://purl.org/auto/l5_de#x"/>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </swrl:arguments>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Moderate_Snow"/>
+                        <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

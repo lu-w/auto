@@ -1,0 +1,605 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/perception#"
+     xml:base="http://purl.org/auto/perception"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:perception="http://purl.org/auto/perception#">
+    <owl:Ontology rdf:about="http://purl.org/auto/perception"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#range -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#range"/>
+    
+
+
+    <!-- http://purl.org/auto/physics#unit -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#unit"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/perception#executed_through_perception_chain -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#executed_through_perception_chain">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#perception_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Perception"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Perception_Chain"/>
+        <rdfs:label xml:lang="de">ausgeführt_durch_perzeptionskette</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_fault_model -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#has_fault_model">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#perception_chain_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Perception_Chain"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Perception_Fault_Model"/>
+        <rdfs:label xml:lang="de">hat_fehlermodell</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_sensor_characteristic -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#has_sensor_characteristic">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#sensor_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Sensor"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Sensor_Characteristic"/>
+        <rdfs:label xml:lang="de">hat_sensorcharakteristik</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded">
+        <owl:inverseOf rdf:resource="http://purl.org/auto/perception#is_occluded_in_occlusion"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_by -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded_by">
+        <owl:inverseOf rdf:resource="http://purl.org/auto/perception#is_occluded_by_in_occlusion"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_by_in_occlusion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded_by_in_occlusion">
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt_von_in_verdeckung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_for -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded_for">
+        <owl:inverseOf rdf:resource="http://purl.org/auto/perception#is_occluded_for_in_occlusion"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt_für</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_for_in_occlusion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded_for_in_occlusion">
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt_für_in_verdeckung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_in_occlusion -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#is_occluded_in_occlusion">
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">ist_verdeckt_in_verdeckung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#observer_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#observer_property">
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:label xml:lang="de">eigenschaft_beobachter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#observes_through_perception -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#observes_through_perception">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#observer_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Perception"/>
+        <rdfs:label xml:lang="de">beobachtet_durch_perzeption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#observes_world_element -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#observes_world_element">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#observer_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:label xml:lang="de">beobachtet_weltentität</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#observes_world_model -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#observes_world_model">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perception#observer_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Environment_Model"/>
+        <rdfs:label xml:lang="de">produziert_weltmodell</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#perception_chain_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#perception_chain_property">
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Perception_Chain"/>
+        <rdfs:label xml:lang="de">eigenschaft_perzeptionskette</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#perception_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#perception_property">
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Perception"/>
+        <rdfs:label xml:lang="de">eigenschaft_perzeption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#sensor_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#sensor_property">
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Sensor"/>
+        <rdfs:label xml:lang="de">eigenschaft_sensor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#subjective_from_point_of_view -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#subjective_from_point_of_view">
+        <rdfs:range rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:label xml:lang="de">subjektiv_von_beobachtungspunkt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/perception#has_horizontal_field_of_view -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_horizontal_field_of_view">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0, 2pi]</physics:range>
+        <physics:unit xml:lang="en">rad</physics:unit>
+        <rdfs:label xml:lang="de">hat_horizontales_sichtfeld</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_occlusion_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_occlusion_rate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range>(0,1]</physics:range>
+        <rdfs:comment xml:lang="en">The degree of occlusion.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_verdeckungsrate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_visibility_range -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_visibility_range">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/perception#Observer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0, \infty]</physics:range>
+        <physics:unit xml:lang="en">m</physics:unit>
+        <rdfs:label xml:lang="de">hat_sichtweite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/perception#Camera_Characteristic -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Camera_Characteristic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor_Characteristic"/>
+        <rdfs:label xml:lang="de">Kameracharakteristik</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Camera_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Camera_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Kamerasensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Data_Acquisition -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Data_Acquisition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Step"/>
+        <rdfs:label xml:lang="de">Datenakquise</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Data_Interpretation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Data_Interpretation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Step"/>
+        <rdfs:label xml:lang="de">Dateninterpretation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Data_Processing -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Data_Processing">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Step"/>
+        <rdfs:label xml:lang="de">Datenverarbeitung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Data_Selection -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Data_Selection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Step"/>
+        <rdfs:label xml:lang="de">Datenselektion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Ear -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Ear">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Human_Sensor"/>
+        <rdfs:label xml:lang="de">Ohr</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Environment_Model -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Environment_Model">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Data_Interpretation"/>
+        <rdfs:label xml:lang="de">Umfeldmodell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Eye -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Eye">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Human_Sensor"/>
+        <rdfs:label xml:lang="de">Auge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Feature_Extraction -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Feature_Extraction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Data_Processing"/>
+        <rdfs:label xml:lang="de">Eigenschaftextraktion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Field_Of_View -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Field_Of_View">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Camera_Characteristic"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor_Performance_Limitation"/>
+        <rdfs:label xml:lang="de">Sichtfeld</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Glare -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Glare">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Camera_Characteristic"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor_Performance_Degradation"/>
+        <rdfs:label xml:lang="de">Blendung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Human_Perception -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Human_Perception">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/perception#Machine_Perception"/>
+        <rdfs:label xml:lang="de">Menschliche_Perzpetion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Human_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Human_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor"/>
+        <rdfs:label xml:lang="de">Menschlicher_Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Infrared_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Infrared_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Infrarotsensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Is_Full_Occlusion -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Is_Full_Occlusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
+        <rdfs:label xml:lang="de">Ist_Vollständige_Verdeckung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Is_Occlusion -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Is_Occlusion">
+        <rdfs:label xml:lang="de">Ist_Verdeckung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Lidar_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Lidar_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Lidarsensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Light_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Light_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Lichtsensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Machine_Perception -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Machine_Perception">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception"/>
+        <rdfs:label xml:lang="de">Maschinelle_Perzeption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Machine_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Machine_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor"/>
+        <rdfs:label xml:lang="de">Maschineller_Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Observer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Observer">
+        <rdfs:label xml:lang="de">Beobachter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception">
+        <rdfs:label xml:lang="de">Perzeption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Chain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Chain">
+        <rdfs:label xml:lang="de">Perzeptionskette</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Characteristic -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Characteristic">
+        <rdfs:label xml:lang="de">Perzeptionscharakteristik</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Fault_Model -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Fault_Model">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Characteristic"/>
+        <rdfs:label xml:lang="de">Perzeptionsfehlermodell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Step -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Step">
+        <rdfs:label xml:lang="de">Perzeptionsschritt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Radar_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Radar_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Radarsensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Rain_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Rain_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Regensensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Data_Acquisition"/>
+        <rdfs:label xml:lang="de">Sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Sensor_Characteristic -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Sensor_Characteristic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Perception_Characteristic"/>
+        <rdfs:label xml:lang="de">Sensorcharakteristik</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Sensor_Fusion -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Sensor_Fusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Data_Processing"/>
+        <rdfs:label xml:lang="de">Sensorfusion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Sensor_Performance_Degradation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Sensor_Performance_Degradation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor_Characteristic"/>
+        <rdfs:label xml:lang="de">Degradierung_Sensorleistung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Sensor_Performance_Limitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Sensor_Performance_Limitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Sensor_Characteristic"/>
+        <rdfs:label xml:lang="de">Limitierung_Sensorleistung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Temperature_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Temperature_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Temperatursensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Ultrasound_Sensor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Ultrasound_Sensor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Machine_Sensor"/>
+        <rdfs:label xml:lang="de">Ultraschallsensor</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

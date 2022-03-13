@@ -1,0 +1,285 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l6_de#"
+     xml:base="http://purl.org/auto/l6_de"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:l6_de="http://purl.org/auto/l6_de#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l6_de">
+        <owl:imports rdf:resource="http://purl.org/auto/l6_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/communication#Message -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Message"/>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Digital_Event -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Digital_Event"/>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Digital_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Digital_Signal"/>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Traffic_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Traffic_Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Message"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Amber_Diagonal_Arrow_Left -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Amber_Diagonal_Arrow_Left">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Lane_Signal_State"/>
+        <rdfs:label xml:lang="de">Gelber_Diagonaler_Pfeil_Links</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Amber_Diagonal_Arrow_Right -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Amber_Diagonal_Arrow_Right">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Lane_Signal_State"/>
+        <rdfs:label xml:lang="de">Gelber_Diagonaler_Pfeil_Rechts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Amber_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Amber_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Gelblicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Left_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Left_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Links_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Right_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Right_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Rechts_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Stop_Expected_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Stop_Expected_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Stop_Erwartet_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Stop_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Stop_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Stop_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Straight_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Straight_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Geradeaus_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Switch_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Switch_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Änderung_Bus_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Traffic_Light_State -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Traffic_Light_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Status_Lichtsignalanlage_Bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Bus_Yield_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Bus_Yield_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Bus_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Bus_Vorfahrt_Gewähren_Licht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Emergency_Lights -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Emergency_Lights">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <rdfs:label xml:lang="de">Blaulicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Flashing_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Flashing_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Blinklicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Green_Arrow_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Green_Arrow_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Lane_Signal_State"/>
+        <rdfs:label xml:lang="de">Signal_Grüner_Pfeil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Green_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Green_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Grünlicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Lane_Signal_State -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Lane_Signal_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <rdfs:label xml:lang="de">Signal_Streifen_Zustand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Radio_Message -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Radio_Message">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Message"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Digital_Signal"/>
+        <rdfs:label xml:lang="de">Radionachricht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Radio_Transmission -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Radio_Transmission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Digital_Event"/>
+        <rdfs:label xml:lang="de">Radioübertragung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Red_Amber_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Red_Amber_Light">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l6_de#Amber_Light"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l6_de#Red_Light"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Rotgelblicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Red_Cross_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Red_Cross_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Lane_Signal_State"/>
+        <rdfs:label xml:lang="de">Signal_Rotes_Kreuz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Red_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Red_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Rotlicht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Siren -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Siren">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <rdfs:label xml:lang="de">Martinshorn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Traffic_Jam_Message -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Traffic_Jam_Message">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_de#Radio_Message"/>
+        <rdfs:label xml:lang="de">Staunachricht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_de#Vehicle_Traffic_Light_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Light_State"/>
+        <rdfs:label xml:lang="de">Status_Lichtsignalanlage_Fahrzeuge</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

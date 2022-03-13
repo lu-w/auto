@@ -1,0 +1,1662 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/"
+     xml:base="http://purl.org/auto/"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+     xmlns:publication="http://purl.org/auto/#publication:"
+     xmlns:Automotive_Urban_Traffic_Ontology="http://purl.org/auto/#"
+     xmlns:automotive_urban_traffic_ontology="http://purl.org/auto/automotive_urban_traffic_ontology/">
+    <owl:Ontology rdf:about="http://purl.org/auto/">
+        <owl:imports rdf:resource="http://purl.org/auto/act"/>
+        <owl:imports rdf:resource="http://purl.org/auto/communication"/>
+        <owl:imports rdf:resource="http://purl.org/auto/perception"/>
+        <owl:imports rdf:resource="http://purl.org/auto/physics"/>
+        <owl:imports rdf:resource="http://purl.org/auto/policy"/>
+        <owl:imports rdf:resource="http://purl.org/auto/traffic_entity_de"/>
+        <owl:imports rdf:resource="http://purl.org/auto/traffic_model"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <rdfs:comment xml:lang="en">This is the Automotive Urban Traffic Ontology. Its competency lies in the description of urban traffic happenings and their entities and relations.</rdfs:comment>
+        <rdfs:label xml:lang="de">Automobile_Urbane_Verkehrsontologie</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/publication_authors -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_authors"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_booktitle -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_booktitle"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_doi -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_doi"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_journal -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_journal"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_pdf -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_pdf"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_publisher"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_title"/>
+    
+
+
+    <!-- http://purl.org/auto/publication_year -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/publication_year"/>
+    
+
+
+    <!-- http://purl.org/auto/#abbreviation -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/#abbreviation"/>
+    
+
+
+    <!-- http://purl.org/auto/#summary -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/#summary"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#qualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#qualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/activity_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/activity_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
+        <rdfs:label xml:lang="de">aktivitätsbezogene_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physical_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physical_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
+        <rdfs:label xml:lang="de">physikalische_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/traffic_modeling_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_modeling_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
+        <rdfs:label xml:lang="de">verkehrsmodellierungs_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/#automotive_urban_traffic_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/#automotive_urban_traffic_property">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="de">automobile_urbane_verkehrseigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/#communication_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/#communication_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
+        <rdfs:label xml:lang="de">kommunikationsbezogene_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/#perceptional_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/#perceptional_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
+        <rdfs:label xml:lang="de">perzeptionsbezogene_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/#temporal_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/#temporal_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
+        <rdfs:label xml:lang="de">zeitliche_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/#traffic_related_concept_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/#traffic_related_concept_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
+        <rdfs:label xml:lang="de">verkehrsverwandtes_konzept_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/act#changes_state_of -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#changes_state_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#conducted_by -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#conducted_by">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#conducts -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#conducts">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#has_intent -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#has_intent">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#has_participant -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#has_participant">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#induced_by_event -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#induced_by_event">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#leads_to_activity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#leads_to_activity">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/act#participates_in -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/act#participates_in">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/communication#delivered_from -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/communication#delivered_from">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/communication#delivers_signal -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#delivers_signal">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#emits_noise -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#emits_noise">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#has_messaging_target -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#has_messaging_target">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#interferes_with_channel -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#interferes_with_channel">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#is_received_by -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#is_received_by">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#is_source_of_message -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#is_source_of_message">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#transports_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#transports_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/communication#wants_to_communicate_message -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#wants_to_communicate_message">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#communication_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_by -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded_by">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_by_in_occlusion -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded_by_in_occlusion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_for -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded_for">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_for_in_occlusion -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded_for_in_occlusion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#is_occluded_in_occlusion -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#is_occluded_in_occlusion">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#observer_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#observer_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#perception_chain_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#perception_chain_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#perception_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#perception_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#sensor_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#sensor_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#subjective_from_point_of_view -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/perception#subjective_from_point_of_view">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#perceptional_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#connected_to -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#connected_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#consists_of -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#consists_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#distance_from -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#distance_from">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#distance_to -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#distance_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_aggregate_state -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_aggregate_state">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_color -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_color">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_dynamical_relation -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_dynamical_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_material -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_material">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_part -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_part">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_positional_relation -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_positional_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_spatial_relation -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_spatial_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_part_of -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#is_part_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/traffic_entity_core#traffic_entity_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/traffic_entity_core#traffic_entity_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#has_activity_set -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/traffic_model#has_activity_set">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#has_traffic_entity -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_model#has_traffic_entity"/>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#traffic_model_element_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/traffic_model#traffic_model_element_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_modeling_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#traffic_model_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_model#traffic_model_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_modeling_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehContains"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCoveredBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehCoveredBy"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCovers -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehCovers"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehDisjoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehDisjoint"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehEquals"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehInside -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehInside"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehMeet"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehOverlap -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehOverlap"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasGeometry -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#hasGeometry">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physical_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8dc -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8eq -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8eq"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntpp -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntppi -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8po -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8po"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tppi -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfCrosses -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfCrosses"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfDisjoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfDisjoint"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfEquals -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfEquals"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfIntersects -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfOverlaps -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfOverlaps"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfTouches"/>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
+    
+
+
+    <!-- http://www.w3.org/2006/time#after -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#after">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#before -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#before">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dayOfWeek -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#dayOfWeek">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasDateTimeDescription -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDateTimeDescription">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTRS -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTRS">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTemporalDuration -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTemporalDuration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inTemporalPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inTemporalPosition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inside -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inside">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalContains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalDisjoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalDisjoint">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalEquals -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalEquals">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalFinishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalFinishedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalIn">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMeets -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalMeets">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalMetBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalMetBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlappedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalOverlappedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalOverlaps -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalOverlaps">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#intervalStartedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalStartedBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#monthOfYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#monthOfYear">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#timeZone -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#timeZone">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#unitType -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#unitType">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/perceptional_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/perceptional_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
+        <rdfs:label xml:lang="de">perzeption_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/#automotive_urban_traffic_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/#automotive_urban_traffic_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label xml:lang="de">automobile_urbane_verkehrsdateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/#physical_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/#physical_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
+        <rdfs:label xml:lang="de">physikalische_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/#temporal_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/#temporal_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
+        <rdfs:label xml:lang="de">temporale_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/#traffic_related_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/#traffic_related_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_data_property"/>
+        <rdfs:label xml:lang="de">verkehrsverwandte_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_horizontal_field_of_view -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#has_horizontal_field_of_view">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perceptional_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_visibility_distance -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_visibility_distance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perceptional_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/perception#has_visibility_range -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#has_visibility_range">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/perceptional_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_azimuth -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_azimuth">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_dimension -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_dimension">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_distance -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_distance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_illumination_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_illumination_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_position_based_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_position_based_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_temperature -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_temperature">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/traffic_entity_core#traffic_entity_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/traffic_entity_core#traffic_entity_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#coordinateDimension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#coordinateDimension">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#dimension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#dimension">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#hasSerialization -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#hasSerialization">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isEmpty -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#isEmpty">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#isSimple -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#isSimple">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#spatialDimension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#spatialDimension">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#day -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#day">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#dayOfYear -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfYear">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#days -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#days">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasXSDDuration -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasXSDDuration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hour -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hour">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hours -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#hours">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDate -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDgYear -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDgYear">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#inXSDgYearMonth -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDgYearMonth">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minute -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#minute">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#minutes -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#minutes">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#month -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#month">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#months -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#months">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#nominalPosition -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#nominalPosition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#numericDuration -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#numericDuration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#numericPosition -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#numericPosition">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#second -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#second">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#seconds -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#seconds">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#week -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#week">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#weeks -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#weeks">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#xsdDateTime -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#xsdDateTime">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#year -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#year">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#years -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2006/time#years">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/#Act_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Act_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Handlungskonzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Communication_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Communication_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Kommunikationskonzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Perceptional_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Perceptional_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Perzeptionskonzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Physical_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Physical_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Physikalisches_Konzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Policy_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Policy_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Regelwerkkonzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Temporal_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Temporal_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
+        <rdfs:label xml:lang="de">Temporales_Konzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/#Traffic_Related_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/#Traffic_Related_Concept">
+        <rdfs:comment xml:lang="en">All the related concepts can be employed be the core classes of A.U.T.O.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Contains concepts from domains that are related and relevant to the traffic ontology, but are semantically seperate. The traffic entity ontology references the included related domains to allow for an accurate representation. For example, time is a concept that is relevant for traffic, but is not a concept exclusively occurring in traffic. Thus, time is a traffic related concept and can be used by any traffic concept.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrsverwandtes_Konzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/act#Intent -->
+
+    <owl:Class rdf:about="http://purl.org/auto/act#Intent">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Act_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Channel -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Channel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Message -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/communication#Message">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/communication#Noise -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/communication#Noise">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/communication#Receiver -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Receiver">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Sender -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Sender">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Signal -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/communication#Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/communication#Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Communication_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Is_Occlusion -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#Is_Occlusion">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/perception#Observer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Observer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Perceptional_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Perceptional_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Chain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Chain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Perceptional_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Characteristic -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Characteristic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Perceptional_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/perception#Perception_Step -->
+
+    <owl:Class rdf:about="http://purl.org/auto/perception#Perception_Step">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Perceptional_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Aggregate_State -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Aggregate_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#Color -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Color">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#Dynamic_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Dynamic_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illumination_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Illumination_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Material -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Material">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#Physical_Object -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Physical_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#Physical_Property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Physical_Property">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/physics#System -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#System">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/policy#Law -->
+
+    <owl:Class rdf:about="http://purl.org/auto/policy#Law">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Policy_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/policy#Norm -->
+
+    <owl:Class rdf:about="http://purl.org/auto/policy#Norm">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Policy_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/policy#Rule -->
+
+    <owl:Class rdf:about="http://purl.org/auto/policy#Rule">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Policy_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#Scenario -->
+
+    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scenario">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#Scene -->
+
+    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scene">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
+                <owl:allValuesFrom rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/traffic_model#Scenery -->
+
+    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scenery">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
+                            <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_Entity"/>
+                            <rdf:Description rdf:about="http://purl.org/auto/l3_core#L3_Entity"/>
+                            <rdf:Description rdf:about="http://purl.org/auto/l5_core#L5_Entity"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#Feature -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2006/time#DayOfWeek -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TRS -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TRS">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalDuration -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalDuration">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalPosition -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalPosition">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TimeZone -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TimeZone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
+    </owl:Class>
+    <rdf:Description>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

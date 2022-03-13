@@ -1,0 +1,1470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/physics#"
+     xml:base="http://purl.org/auto/physics"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/physics">
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#range -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#range">
+        <rdfs:comment xml:lang="en">Allows to annotate valid value ranges of data properties.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#unit -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#unit">
+        <rdfs:comment xml:lang="en">Allows to annotate units on data properties.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#gmlLiteral -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#gmlLiteral">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#wktLiteral -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#wktLiteral">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#EH_spatial_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#EH_spatial_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#RCC8_spatial_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#RCC8_spatial_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#SF_spatial_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#SF_spatial_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#connected_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#connected_to">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">Whether two physical objects are mechanically connected, e.g. via a shaft.</rdfs:comment>
+        <rdfs:label xml:lang="de">verbunden_mit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#consists_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#consists_of">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#System"/>
+        <rdfs:label xml:lang="de">besteht_aus</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#distance_from -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#distance_from">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Has_Distance_To"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">Reified property (distance).</rdfs:comment>
+        <rdfs:label xml:lang="de">abstand_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#distance_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#distance_to">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Has_Distance_To"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">Reified property (distance).</rdfs:comment>
+        <rdfs:label xml:lang="de">abstand_zu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_color -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_color">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Color"/>
+        <rdfs:label xml:lang="de">hat_farbe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_dynamical_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_dynamical_relation">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:comment xml:lang="en">Properties of dynamical objects.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_dynamikbeziehung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_intersecting_path -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_intersecting_path">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_dynamical_relation"/>
+        <rdfs:comment xml:lang="en">True iff the linear path of two objects, depending on the current positions and yaw angles, intersect.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_kreuzenden_pfad</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_material -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_material">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Material"/>
+        <rdfs:comment xml:lang="en">A physical object can consist of one or multiple materials such as wood, metal.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_part -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_part">
+        <owl:inverseOf rdf:resource="http://purl.org/auto/physics#is_part_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:comment xml:lang="en">A physical object can consist of single parts.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_teil</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_positional_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_positional_relation">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">All direction-based relations, i.e. excluding RCC8 etc.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_positionsbeziehung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_spatial_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#has_spatial_relation">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">Non-directional spatial relations, i.e. RCC8, Egenhofer, and DE-9IM relations based on GeoSPARQL.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_räumliche_beziehung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_behind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_behind">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_positional_relation"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is behind another spatial object. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_hinter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_in_front_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_in_front_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_positional_relation"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is in fron of another spatial object. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_vor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_in_proximity -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_in_proximity">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If two spatial entities are in proximity. 
+In our context, it is defined as a distance of less than 15 meters between both spatial objects.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_in_der_naehe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_left_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_left_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_positional_relation"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is left of another spatial object. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_links_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_near -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_near">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_in_proximity"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is close to another. 
+In our context, it is defined as a distance of less than 2 meters between both spatial objects.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_nahe</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_part_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_part_of">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:comment xml:lang="en">A physical object can be a part of another physical object.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_teil_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_properly_behind -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_properly_behind">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_behind"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is properly behind another spatial object, i.e. behind and also not overlapping. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_echt_hinter</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_properly_in_front_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_properly_in_front_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_in_front_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is properly in front of another spatial object, i.e. in front of and also not overlapping. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_echt_vor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_properly_left_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_properly_left_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_left_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is properly left of another spatial object, i.e. left of and also not overlapping. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_echt_links_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_properly_right_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_properly_right_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_right_of"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is properly right of another spatial object, i.e. right of and also not overlapping. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_echt_rechts_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#is_right_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_right_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_positional_relation"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If one spatial object is right of another spatial object. Concrete mathematical definition depends on use case, e.g. using center of masses as points of comparisons.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_rechts_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#performance_spatial_relation -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#performance_spatial_relation">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
+        <rdfs:comment xml:lang="en">Needed for performance reasoners to allow the reasoner to distinguish certain spatial relations used in SWRL rules.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#sfIntersects_crosswalk_bicyclist -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_crosswalk_bicyclist">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#sfIntersects_crosswalk_lane -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_crosswalk_lane">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#sfIntersects_lane_driver -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_lane_driver">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#sfIntersects_nonlane_bicyclist -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_nonlane_bicyclist">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehContains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCoveredBy -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehCoveredBy">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehCovers -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehCovers">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehDisjoint -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehDisjoint">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8dc"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehEquals -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehEquals">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#rcc8eq"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehInside -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehInside">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehMeet -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehMeet">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#ehOverlap -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#ehOverlap">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8dc -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8dc">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfDisjoint"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ec"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8eq"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ec -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8ec">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8eq"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8eq -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8eq">
+        <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfEquals"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntpp -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntpp">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <owl:inverseOf rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8ntppi -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntppi">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8po -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8po">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tpp -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8tpp">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+        <owl:inverseOf rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#rcc8tppi -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#rcc8tppi">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfContains -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfCrosses -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfCrosses">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfDisjoint -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfDisjoint">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfEquals -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfEquals">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfIntersects -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfIntersects">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfOverlaps -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfOverlaps">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfTouches -->
+
+    <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#sfTouches">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#sfWithin -->
+
+    <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#has_acceleration -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_acceleration">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <unit>m/s^2</unit>
+        <rdfs:label xml:lang="de">hat_beschleunigung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_acceleration_x -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_acceleration_x">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^2</unit>
+        <rdfs:label xml:lang="de">hat_beschleunigung_x</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_acceleration_y -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_acceleration_y">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^2</unit>
+        <rdfs:label xml:lang="de">hat_beschleunigung_y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_acceleration_z -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_acceleration_z">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^2</unit>
+        <rdfs:label xml:lang="de">hat_beschleunigung_z</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_azimuth -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_azimuth">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,2pi]</range>
+        <unit xml:lang="en">rad</unit>
+        <rdfs:label xml:lang="de">hat_azimuth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_dimension -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_dimension">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Dimensional property such as width or height - do not need information about the coordinate system.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_dimension</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_distance -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_distance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Has_Distance_To"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,\infty)</range>
+        <unit xml:lang="en">m</unit>
+        <rdfs:comment xml:lang="en">Reified property (distance).</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_abstand</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_height -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_height">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_dimension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,\infty)</range>
+        <unit xml:lang="en">m</unit>
+        <rdfs:label xml:lang="de">hat_höhe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_illuminance -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_illuminance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_illumination_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="de">[0, \infty)</range>
+        <unit xml:lang="de">lx</unit>
+        <rdfs:comment xml:lang="en">A surface can have an illuminance.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_illuminanz</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_illumination_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_illumination_property">
+        <rdfs:label xml:lang="de">hat_beleuchtungseigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_jerk_x -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_jerk_x">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^3</unit>
+        <rdfs:label xml:lang="de">hat_ruck_x</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_jerk_y -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_jerk_y">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^3</unit>
+        <rdfs:label xml:lang="de">hat_ruck_y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_jerk_z -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_jerk_z">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s^3</unit>
+        <rdfs:label xml:lang="de">hat_ruck_z</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_length -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_length">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_dimension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,\infty)</range>
+        <unit xml:lang="en">m</unit>
+        <rdfs:label xml:lang="de">hat_länge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_luminous_flux -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_luminous_flux">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_illumination_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0, \infty)</range>
+        <unit xml:lang="en">lm</unit>
+        <rdfs:comment xml:lang="en">A light source has a luminous flux.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_lichtstrom</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_pitch -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_pitch">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°</unit>
+        <rdfs:comment xml:lang="en">From OMEGA documentation 3.0: &quot;The pitch angle is provided in the vehicles coordinate system. It is the angle in respect to the y-axis in the vehicle coordinate system. It is also provided in mathematically positive direction. An angle of zero corresponds to the x-y-plane.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_nickwinkel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_pitch_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_pitch_rate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°/s</unit>
+        <rdfs:label xml:lang="de">hat_nickrate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_position_based_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_position_based_property">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:label xml:lang="de">hat_positionsbasierte_eigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_roll -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_roll">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°</unit>
+        <rdfs:comment xml:lang="en">From OMEGA documentation 3.0: &quot;The roll angle is provided in the vehicles coordinate system. It is the angle in respect to the x-axis in the vehicle coordinate system. It is also provided in mathematically positive direction. An angle of zero corresponds to the x-y-plane.&quot;</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_rollwinkel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_roll_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_roll_rate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°/s</unit>
+        <rdfs:label xml:lang="de">hat_rollrate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_speed">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s</unit>
+        <rdfs:comment xml:lang="en">Norm of velocity.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_schnelligkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_temperature -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_temperature">
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">°C</unit>
+        <rdfs:comment xml:lang="en">Any physical object can have a temperature.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_temperatur</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_velocity_x -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_velocity_x">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s</unit>
+        <rdfs:label xml:lang="de">hat_geschwindigkeit_x</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_velocity_y -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_velocity_y">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s</unit>
+        <rdfs:label xml:lang="de">hat_geschwindigkeit_y</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_velocity_z -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_velocity_z">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <unit xml:lang="en">m/s</unit>
+        <rdfs:label xml:lang="de">hat_geschwindigkeit_z</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_width -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_width">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_dimension"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,\infty)</range>
+        <unit xml:lang="en">m</unit>
+        <rdfs:label xml:lang="de">hat_breite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_yaw -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_yaw">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°</unit>
+        <rdfs:comment xml:lang="en">From OMEGA documentation 3.0: &quot;The heading angle is defined as the angle around the z-axis. This is true for the UTM coordinate system and the vehicle coordinate system. Therefore, the heading angle can be used to transform from one system into the other. Heading angles are provided in the mathematically positive direction (counter clockwise). A heading angle of zero corresponds with the east direction (x-axis in UTM coordinate system)&quot;</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_gierwinkel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_yaw_rate -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_yaw_rate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <range xml:lang="en">[0,360]</range>
+        <unit xml:lang="en">°/s</unit>
+        <rdfs:label xml:lang="de">hat_gierrate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#Active_Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Active_Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/physics#Passive_Illumination_Source"/>
+        <rdfs:comment xml:lang="en">An active illumination source creates its emmited light directly within itself.</rdfs:comment>
+        <rdfs:label xml:lang="de">Aktive_Lichtquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Active_Lamp -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Active_Lamp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Lamp"/>
+        <rdfs:comment xml:lang="en">An light source that is functioning and powered on and therefore emitting light.</rdfs:comment>
+        <rdfs:label xml:lang="de">Aktive_Leuchte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Aggregate_State -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Aggregate_State">
+        <rdfs:comment xml:lang="en">Any physical object can have an aggregate state.</rdfs:comment>
+        <rdfs:label xml:lang="de">Aggregatszustand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Color -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Color">
+        <rdfs:comment xml:lang="en">The color of the surface of a spatial object.</rdfs:comment>
+        <rdfs:label xml:lang="de">Farbe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Corrupted_Spatial_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Corrupted_Spatial_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If an object is corrupted in its shape or functioning such that it can not adequately fulfill its intended purpose.</rdfs:comment>
+        <rdfs:label xml:lang="de">Beschädigtes_Räumliches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Dynamical_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Dynamical_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/physics#Spatial_Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A dynamical object is a spatial object that can have dynamical properties such as speed or acceleration.</rdfs:comment>
+        <rdfs:label xml:lang="de">Dynamisches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Gas -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Gas">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Aggregate_State"/>
+        <rdfs:comment xml:lang="en">A spatial volume that is filled with a gaseous material.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Has_Distance_To -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Has_Distance_To">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Physical_Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#distance_from"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#distance_to"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_distance"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Reification of distance property. Use its two object properties distance_to and distance_from to indicate the related entities, and use its data property has_distance to indicate the actual distance between the related entities.</rdfs:comment>
+        <rdfs:label xml:lang="de">Hat_Abstand_Zu</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Highly_Corrupted_Spatial_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Highly_Corrupted_Spatial_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Corrupted_Spatial_Object"/>
+        <rdfs:comment xml:lang="en">If an object is corrupted in its shape or functioning such that it can not fulfill its intended purpose.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stark_Beschädigtes_Räumliches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illuminated_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Illuminated_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Concept"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">An object which is illuminated by a light source.</rdfs:comment>
+        <rdfs:label xml:lang="de">Beleuchtetes_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illumination_Concept -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Illumination_Concept">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:comment xml:lang="en">Any concept necessary to describe illumination properties of physical objects.</rdfs:comment>
+        <rdfs:label xml:lang="de">Beleuchtungskonzept</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Concept"/>
+        <rdfs:comment xml:lang="en">A physical object that illuminates other physical objects.</rdfs:comment>
+        <rdfs:label xml:lang="de">Lichtquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Inactive_Lamp -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Inactive_Lamp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Lamp"/>
+        <rdfs:comment xml:lang="en">An light source that is powered off and therefore not emitting light.</rdfs:comment>
+        <rdfs:label xml:lang="de">Inaktive_Leuchte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Lamp -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Lamp">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Active_Illumination_Source"/>
+        <rdfs:comment xml:lang="en">An artificially created illumination source hat uses a luminaire as its light source.</rdfs:comment>
+        <rdfs:label xml:lang="de">Leuchte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Liquid -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Liquid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Aggregate_State"/>
+        <rdfs:label xml:lang="de">Flüssigkeit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Material -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Material">
+        <rdfs:comment xml:lang="en">A physical object can consist of one or multiple materials such as wood, metal.</rdfs:comment>
+        <rdfs:label xml:lang="de">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Metal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Metal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Moist_Physical_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Moist_Physical_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:comment xml:lang="en">A physical object that has absorbed a significant amount of water in comparison to its &apos;dry&apos; state at &apos;normal&apos; conditions.</rdfs:comment>
+        <rdfs:label xml:lang="de">Feuchtes_Physikalisches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Moving_Dynamical_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Moving_Dynamical_Object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/physics#Dynamical_Object"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
+                                <owl:someValuesFrom>
+                                    <rdfs:Datatype>
+                                        <owl:oneOf>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </owl:oneOf>
+                                    </rdfs:Datatype>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:label xml:lang="de">Bewegendes_Dynamisches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Non_Moving_Dynamical_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Non_Moving_Dynamical_Object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/physics#Dynamical_Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+        <rdfs:comment xml:lang="en">A dynamic object with velocity of 0.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stehendes_Dynamisches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">A particle is a very small spatial object, e.g. a dust particle suspended in the air.
+
+TODO: Define particle through spatial properties (e.g. small diameter?). Find references for this.</rdfs:comment>
+        <rdfs:label xml:lang="de">Partikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Passive_Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Passive_Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <rdfs:comment xml:lang="en">A passive illumination source creates its illumination through illumination of another light source.</rdfs:comment>
+        <rdfs:label xml:lang="de">Passive_Lichtquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Physical_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Physical_Object">
+        <rdfs:comment xml:lang="en">Any object that can have physical properties such as mass, illumination, radiation, velocity.</rdfs:comment>
+        <rdfs:label xml:lang="de">Physikalisches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Physical_Property -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Physical_Property">
+        <rdfs:comment xml:lang="en">Reified physical properties such as &apos;distance&apos;.</rdfs:comment>
+        <rdfs:label xml:lang="de">Physikalische_Eigenschaft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Solid -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Solid">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Aggregate_State"/>
+        <rdfs:label xml:lang="de">Festkörper</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Spatial_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Spatial_Object">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/physics#Physical_Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+                        <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/sf#Geometry"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
+        <rdfs:comment xml:lang="en">Any physical object with a geometrical representation, e.g. a vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="de">Räumliches_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#System -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#System">
+        <rdfs:comment xml:lang="en">An aggregate of physical objects that in combination fulfill a specific function. 
+Specified by the object property consists_of.</rdfs:comment>
+        <rdfs:label xml:lang="de">System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Wood -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Wood">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Material"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.opengis.net/ont/geosparql#SpatialObject -->
+
+    <owl:Class rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/physics#Blue -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/auto/physics#Blue">
+        <rdf:type rdf:resource="http://purl.org/auto/physics#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/auto/physics#Green -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/auto/physics#Green">
+        <rdf:type rdf:resource="http://purl.org/auto/physics#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/auto/physics#Red -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/auto/physics#Red">
+        <rdf:type rdf:resource="http://purl.org/auto/physics#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/auto/physics#White -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/auto/physics#White">
+        <rdf:type rdf:resource="http://purl.org/auto/physics#Color"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/auto/physics#Yellow -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/auto/physics#Yellow">
+        <rdf:type rdf:resource="http://purl.org/auto/physics#Color"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

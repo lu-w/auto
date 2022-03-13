@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="User Entered Import Resolution" name="http://purl.org/auto/communication" uri="../traffic_related/communication.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/auto/policy" uri="../traffic_related/policy.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/auto/physics" uri="../traffic_related/physics.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/descriptive_traffic_entity_de" uri="descriptive_traffic_entity/descriptive_traffic_entity_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/descriptive_traffic_entity_core" uri="descriptive_traffic_entity/descriptive_traffic_entity_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/interpretative_traffic_entity_de" uri="interpretative_traffic_entity/interpretative_traffic_entity_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/interpretative_traffic_entity_core" uri="interpretative_traffic_entity/interpretative_traffic_entity_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_core" uri="traffic_entity_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_de" uri="traffic_entity_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l1_de" uri="descriptive_traffic_entity/l1/l1_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l1_core" uri="descriptive_traffic_entity/l1/l1_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l2_de" uri="descriptive_traffic_entity/l2/l2_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l2_core" uri="descriptive_traffic_entity/l2/l2_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l3_de" uri="descriptive_traffic_entity/l3/l3_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l3_core" uri="descriptive_traffic_entity/l3/l3_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l4_de" uri="descriptive_traffic_entity/l4/l4_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l4_core" uri="descriptive_traffic_entity/l4/l4_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l5_de" uri="descriptive_traffic_entity/l5/l5_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l5_core" uri="descriptive_traffic_entity/l5/l5_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_de" uri="descriptive_traffic_entity/l6/l6_de.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_core" uri="descriptive_traffic_entity/l6/l6_core.owl"/>
+</catalog>

@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l3_de#"
+     xml:base="http://purl.org/auto/l3_de"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:l3_de="http://purl.org/auto/l3_de#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l3_de">
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l1_de"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l2_de"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l3_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l2_de#Building -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_de#Building"/>
+    
+
+
+    <!-- http://purl.org/auto/l2_de#Tree -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_de#Tree"/>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#Modifying_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modifying_Entity"/>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Boulder -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Boulder">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Disruption"/>
+        <rdfs:label xml:lang="de">Felsbrocken</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Construction_Site -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Construction_Site">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Temporary_Construction"/>
+        <rdfs:label xml:lang="de">Baustelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Fallen_Branch -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Fallen_Branch">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Fallen_Object"/>
+        <rdfs:label xml:lang="de">Gefallener_Ast</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Fallen_Building -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Fallen_Building">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#Building"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Fallen_Object"/>
+        <rdfs:label xml:lang="de">Gefallenes_Gebäude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Fallen_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Fallen_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Disruption"/>
+        <rdfs:label xml:lang="de">Gefallenes_Objekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Fallen_Tree -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Fallen_Tree">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#Tree"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Fallen_Object"/>
+        <rdfs:label xml:lang="de">Gefallener_Baum</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Oil_Contamination -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Oil_Contamination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+        <rdfs:label xml:lang="de">Ölkontamination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Pile_Of_Leaves -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Pile_Of_Leaves">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+        <rdfs:label xml:lang="de">Laubhaufen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Grit -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Grit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+        <rdfs:label xml:lang="de">Streugut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Salt -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Grit"/>
+        <rdfs:label xml:lang="de">Streusalz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Sand -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Sand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Grit"/>
+        <rdfs:label xml:lang="de">Streusand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Surface_Contamination -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Surface_Contamination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Disruption"/>
+        <rdfs:label xml:lang="de">Straßenoberflächenkontamination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Surface_Disruption -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Surface_Disruption">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#ehCovers"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l1_core#Road_Network_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straßenoberflächenstörung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_With_Dirt -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_With_Dirt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#Modified_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straße_Mit_Schmutz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_With_Grit -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_With_Grit">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#Modified_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l3_de#Road_Grit"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straße_Mit_Streugut</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_With_Salt -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_With_Salt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_With_Grit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l3_de#Road_Salt"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straße_Mit_Streusalz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_With_Sand -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_With_Sand">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_With_Grit"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l3_de#Road_Sand"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straße_Mit_Streusand</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Road_Without_Contamination -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Road_Without_Contamination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Straße_Ohne_Verschmutzung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Sand_Contamination -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Sand_Contamination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+        <rdfs:label xml:lang="de">Sandkontamination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Soil_Contamination -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Soil_Contamination">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Road_Surface_Contamination"/>
+        <rdfs:label xml:lang="de">Erdkontamination</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Temporary_Construction -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Temporary_Construction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
+        <rdfs:label xml:lang="de">Temporäre_Konstruktion</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_de#Temporary_Divider -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_de#Temporary_Divider">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_de#Temporary_Construction"/>
+        <rdfs:label xml:lang="de">Temporäre_Trennwand</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

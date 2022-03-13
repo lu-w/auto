@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l3_core#"
+     xml:base="http://purl.org/auto/l3_core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l3_core="http://purl.org/auto/l3_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l3_core">
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l2_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l3_core#L3_property">
+        <rdfs:label xml:lang="de">L3_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#applies_modification -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l3_core#applies_modification">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l3_core#L3_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l3_core#Modificiation"/>
+        <rdfs:label xml:lang="en">A modifying entity can lead to some modification, e.g. closing a lane.</rdfs:label>
+        <rdfs:label xml:lang="de">bedingt_modifizierung</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#modified_by -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l3_core#modified_by">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l3_core#L3_property"/>
+        <owl:inverseOf rdf:resource="http://purl.org/auto/l3_core#modifies"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l3_core#Modified_Entity"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
+        <rdfs:label xml:lang="de">modifiziert_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#modifies -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l3_core#modifies">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l3_core#L3_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l3_core#Modified_Entity"/>
+        <rdfs:comment xml:lang="en">A Layer 3 entity can modify any other entity.</rdfs:comment>
+        <rdfs:label xml:lang="de">modifiziert</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l3_core#L3_data_property">
+        <rdfs:label xml:lang="de">L3_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#L3_Entity">
+        <rdfs:label xml:lang="de">L3_Entität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#Modificiation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modificiation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#L3_Entity"/>
+        <rdfs:comment xml:lang="en">A modification that is conducted by some temporary entity, e.g. the modification of closing a lane.</rdfs:comment>
+        <rdfs:label xml:lang="de">Modifikation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#Modified_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modified_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#L3_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_Entity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Layer 1 or 2 entity that is temporally modified, e.g. a lane.</rdfs:comment>
+        <rdfs:label xml:lang="de">Modifizierte_Entität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#Modifying_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modifying_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#L3_Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">A temporary entity that modifies the semantics of some other entity, e.g. a construction site.</rdfs:comment>
+        <rdfs:label xml:lang="de">Modifizierende_Entität</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

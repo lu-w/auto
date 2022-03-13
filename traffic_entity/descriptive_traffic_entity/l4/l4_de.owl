@@ -1,0 +1,910 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l4_de#"
+     xml:base="http://purl.org/auto/l4_de"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:l4_de="http://purl.org/auto/l4_de#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l4_de">
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l1_de"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l4_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l4_core#Animal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_core#Animal"/>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#Off_Light_Vehicle -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Off_Light_Vehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Vehicle"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://purl.org/auto/l4_de#Headlight"/>
+                                            <rdf:Description rdf:about="http://purl.org/auto/physics#Active_Lamp"/>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#Traffic_Maneuver -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Maneuver">
+        <rdfs:comment xml:lang="en">From &apos;Fertigkeiten- und Fähigkeitengraphen als Grundlage des sicheren Betriebs von automatisierten Fahrzeugen im öffentlichen Straßenverkehr in städtischer Umgebung&apos;, A. C. Reschka, 2017.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_core#Vehicle"/>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Adult -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Adult">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/l4_de#Child"/>
+        <rdfs:label xml:lang="de">Erwachsener</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Animal_Drawn_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Animal_Drawn_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Tiergezogenes_Fahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bendy_Bus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bendy_Bus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
+        <rdfs:label xml:lang="de">Ziehharmonikabus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bendy_Bus_Trailer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bendy_Bus_Trailer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
+        <rdfs:label xml:lang="de">Ziehharmonikbusanhänger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bicycle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bicycle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
+        <rdfs:label xml:lang="de">Fahrrad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bicyclist -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bicyclist">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Driver"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_de#Bicycle"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:label xml:lang="de">Radfahrender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bird -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bird">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Wild_Animal"/>
+        <rdfs:label xml:lang="de">Vogel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Brake_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Brake_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Light"/>
+        <rdfs:label xml:lang="de">Bremsleuchten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Bus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Bus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Commercial_Vehicle"/>
+        <rdfs:label xml:lang="de">Bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Caravan -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Caravan">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
+        <rdfs:label xml:lang="de">Wohnanhänger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Carriage -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Carriage">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Animal_Drawn_Vehicle"/>
+        <rdfs:label xml:lang="de">Kutsche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Carry_Bag -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Carry_Bag">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Marginal_Traffic_Object"/>
+        <rdfs:label xml:lang="de">Tragetasche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Cart -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cart">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
+        <rdfs:label xml:lang="de">Einkaufswagen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Cat -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cat">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Domestic_Animal"/>
+        <rdfs:label xml:lang="de">Katze</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Child -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Child">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <rdfs:label xml:lang="de">Kind</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Commercial_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Commercial_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Nutzfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Construction_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Construction_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Baustellenfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Cross_Intersection -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cross_Intersection">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Kreuzung_Überfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Cut_In -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_In">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
+        <rdfs:label xml:lang="de">Einscheren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Cut_Out -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_Out">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
+        <rdfs:label xml:lang="de">Ausscheren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Deer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Deer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Wild_Animal"/>
+        <rdfs:label xml:lang="de">Hirsch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Dog -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Dog">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Domestic_Animal"/>
+        <rdfs:label xml:lang="de">Hund</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Domestic_Animal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Domestic_Animal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Animal"/>
+        <rdfs:label xml:lang="de">Haustier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Driving_Straight -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Driving_Straight">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Geradeausfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#E-Bike -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#E-Bike">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Partially_Motorized_Vehicle"/>
+        <rdfs:label xml:lang="de">E-Bike</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#E-Scooter -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#E-Scooter">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Personal_Mobility_Device"/>
+        <rdfs:label xml:lang="de">E-Scooter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Emergency_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Emergency_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Light"/>
+        <rdfs:label xml:lang="de">Kennleuchte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Emergency_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Emergency_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Einsatzfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Encroach -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Encroach">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Annähern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Farming_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Farming_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Commercial_Vehicle"/>
+        <rdfs:label xml:lang="de">Landwirtschaftsfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Garbage_Container -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Garbage_Container">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Marginal_Traffic_Object"/>
+        <rdfs:label xml:lang="de">Abfallcontainer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Handcart -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Handcart">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
+        <rdfs:label xml:lang="de">Handkarre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Headlight -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Headlight">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Light"/>
+        <rdfs:label xml:lang="de">Frontscheinwerfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Horse -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Horse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Domestic_Animal"/>
+        <rdfs:label xml:lang="de">Pferd</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Indicator_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Indicator_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Light"/>
+        <rdfs:label xml:lang="de">Fahrtrichtungsanzeiger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Indicator_Light_Left -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Indicator_Light_Left">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Indicator_Light"/>
+        <rdfs:label xml:lang="de">Fahrtrichtungsanzeiger_Links</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Indicator_Light_Right -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Indicator_Light_Right">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Indicator_Light"/>
+        <rdfs:label xml:lang="de">Fahrtrichtungsanzeiger_Rechts</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Lane_Change -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Lane_Change">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Spurwechsel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Left_Turn -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Left_Turn">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
+        <rdfs:label xml:lang="de">Linksabbiegen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Metall_Can -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Metall_Can">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Marginal_Traffic_Object"/>
+        <rdfs:label xml:lang="de">Metalldose</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Motorcycle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Motorcycle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
+        <rdfs:label xml:lang="de">Motorrad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Parking_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Parking_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Parkendes_Fahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Pass -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Pass">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Vorbeifahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Passenger -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Passenger">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#is_transported"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A human that is transported by some vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="de">Passagier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Passenger_Car -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Passenger_Car">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
+        <rdfs:label xml:lang="de">Personenkraftwagen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Passenger_Vehicle_Trailer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Passenger_Vehicle_Trailer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
+        <rdfs:label xml:lang="de">Personenfahrzeuganhänger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Pedelec -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Pedelec">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:label xml:lang="de">Pedelec</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Personal_Mobility_Device -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Personal_Mobility_Device">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Kleinstfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Playing_Ball -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Playing_Ball">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Playing_Equipment"/>
+        <rdfs:label xml:lang="de">Spielball</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Playing_Equipment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Playing_Equipment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Marginal_Traffic_Object"/>
+        <rdfs:label xml:lang="de">Spielzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Public_Bus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Public_Bus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
+        <rdfs:label xml:lang="de">Öffentlicher_Bus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Racoon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Racoon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Wild_Animal"/>
+        <rdfs:label xml:lang="de">Waschbär</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Rail_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Rail_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:label xml:lang="de">Schienenfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Reversing_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Reversing_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Light"/>
+        <rdfs:label xml:lang="de">Rückfahrscheinwerfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Right_Turn -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Right_Turn">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
+        <rdfs:label xml:lang="de">Rechtsabbiegen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Road_Worker -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Road_Worker">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <rdfs:label xml:lang="de">Straßenarbeitender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Rotating_Emergency_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Rotating_Emergency_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Emergency_Light"/>
+        <rdfs:label xml:lang="de">Rundumkennleuchte</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Safe_Stop -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Safe_Stop">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
+        <rdfs:label xml:lang="de">Sicheres_Anhalten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#School_Bus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#School_Bus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
+        <rdfs:label xml:lang="de">Schulbus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Start -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Start">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Anfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Stop -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Stop">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Anhalten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Stopped_Vehicle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Stopped_Vehicle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+        <rdfs:label xml:lang="de">Haltendes_Fahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Street_Cleaning_Truck -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Street_Cleaning_Truck">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Truck"/>
+        <rdfs:label xml:lang="de">Abfallsammelfahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Strong_Braking_Stop -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Strong_Braking_Stop">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
+        <rdfs:label xml:lang="de">Anhalten_Mit_Starkem_Bremsmanöver</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Tour_Bus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Tour_Bus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
+        <rdfs:label xml:lang="de">Tourbus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Tractor -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Tractor">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Farming_Vehicle"/>
+        <rdfs:label xml:lang="de">Traktor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Traffic_Control_Person -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Traffic_Control_Person">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <rdfs:label xml:lang="de">Verkehrskontrollierender</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Train -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Train">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Rail_Vehicle"/>
+        <rdfs:label xml:lang="de">Zug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Train_Trailer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Train_Trailer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
+        <rdfs:label xml:lang="de">Eisenbahnwagen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Tram -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Tram">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Rail_Vehicle"/>
+        <rdfs:label xml:lang="de">Straßenbahn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Trolleybus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Trolleybus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
+        <rdfs:label xml:lang="de">Oberleitungsbus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Truck -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Truck">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Cargo_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Commercial_Vehicle"/>
+        <rdfs:label xml:lang="de">Lastkraftwagen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Truck_Trailer -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Truck_Trailer">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
+        <rdfs:label xml:lang="de">Sattelauflieger</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Turn -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
+        <rdfs:label xml:lang="de">Abbiegen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Turn_Around -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn_Around">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
+        <rdfs:label xml:lang="de">Umdrehen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Vehicle_Door -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Vehicle_Door">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Component"/>
+        <rdfs:label xml:lang="de">Fahrzeugtüre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Vehicle_Engine -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Vehicle_Engine">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Component"/>
+        <rdfs:label xml:lang="de">Fahrzeugmotor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Vehicle_Powertrain -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Vehicle_Powertrain">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Component"/>
+        <rdfs:label xml:lang="de">Fahrzeugantrieb</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Vehicle_Wheel -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Vehicle_Wheel">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle_Component"/>
+        <rdfs:label xml:lang="de">Fahrzeugrad</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Vulnerable_Road_User -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Vulnerable_Road_User">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
+                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Partially_Motorized_Vehicle"/>
+                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_de#Pedelec"/>
+                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_de#Personal_Mobility_Device"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_de#Bicycle"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Participant"/>
+        <rdfs:label xml:lang="de">Ungeschützter_Verkehrsteilnehmer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Wheelchair -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Wheelchair">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Personal_Mobility_Device"/>
+        <rdfs:label xml:lang="de">Rollstuhl</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_de#Wild_Animal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_de#Wild_Animal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Animal"/>
+        <rdfs:label xml:lang="de">Wildtier</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Vehicle"/>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/physics#Non_Moving_Dynamical_Object"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l1_de#Parking_Lane"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Parking_Vehicle"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/physics" uri="../../../traffic_related/physics.owl"/>
+    <uri id="User Entered Import Resolution" name="http://purl.org/auto/communication" uri="../../../traffic_related/communication.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l2_core" uri="../l2/l2_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l2_de" uri="../l2/l2_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_core" uri="../l6/l6_core.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_de" uri="../l6/l6_core.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1633008306127" name="http://purl.org/auto/l1_core" uri="l1_core.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1633008306127" name="http://purl.org/auto/l1_de" uri="l1_de.owl"/>
+    </group>
+</catalog>

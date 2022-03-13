@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/descriptive_traffic_entity_core#"
+     xml:base="http://purl.org/auto/descriptive_traffic_entity_core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:descriptive_traffic_entity_core="http://purl.org/auto/descriptive_traffic_entity_core#">
+    <owl:Ontology rdf:about="http://purl.org/auto/descriptive_traffic_entity_core">
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l2_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l3_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l4_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l5_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l6_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property">
+        <rdfs:label xml:lang="de">deskriptive_verkehrsentität_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l3_core#L3_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#L4_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l4_core#L4_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l5_core#L5_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l6_core#L6_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property">
+        <rdfs:label xml:lang="de">deskriptive_verkehrsentität_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l3_core#L3_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#L4_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l4_core#L4_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l5_core#L5_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_data_property -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l6_core#L6_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#descriptive_traffic_entity_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity">
+        <rdfs:label xml:lang="de">Deskriptive_Verkehrsentität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_Entität -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entität">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l3_core#L3_Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l3_core#L3_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#L4_Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l4_core#L4_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l5_core#L5_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_Entity -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l6_core#L6_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

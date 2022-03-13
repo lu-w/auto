@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l6_core#"
+     xml:base="http://purl.org/auto/l6_core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l6_core="http://purl.org/auto/l6_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l6_core">
+        <owl:imports rdf:resource="http://purl.org/auto/communication"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l6_core#L6_property">
+        <rdfs:label xml:lang="de">L6_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l6_core#L6_data_property">
+        <rdfs:label xml:lang="de">L6_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/communication#Noise -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Noise">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Digital_Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/communication#Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/communication#Signal"/>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Active_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Active_Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/l6_core#Inactive_Signal"/>
+        <rdfs:comment xml:lang="en">A signal that is currently transmitted.</rdfs:comment>
+        <rdfs:label xml:lang="de">Aktives_Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Digital_Event -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Digital_Event">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#L6_Entity"/>
+        <rdfs:label xml:lang="de">Digitales_Ereignis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Digital_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Digital_Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Signal"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#L6_Entity"/>
+        <rdfs:label xml:lang="de">Digitales_Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Inactive_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Inactive_Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <rdfs:comment xml:lang="en">A signal that is not transmitted.</rdfs:comment>
+        <rdfs:label xml:lang="de">Inaktives_Signal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#L6_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#L6_Entity">
+        <rdfs:label xml:lang="de">L6_Entität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Traffic_Light_State -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Traffic_Light_State">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Traffic_Signal"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/communication#delivered_from"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Traffic_Light"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The state of a traffic light.</rdfs:comment>
+        <rdfs:label xml:lang="de">Status_Lichtsignalanlage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l6_core#Traffic_Signal -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l6_core#Traffic_Signal">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l6_core#Digital_Signal"/>
+        <rdfs:label xml:lang="de">Verkehrssignal</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

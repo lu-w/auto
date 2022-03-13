@@ -1,0 +1,638 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l1_core#"
+     xml:base="http://purl.org/auto/l1_core"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l1_core="http://purl.org/auto/l1_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l1_core">
+        <owl:imports rdf:resource="http://purl.org/auto/l6_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/physics"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#L1_property">
+        <rdfs:label xml:lang="de">L1_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#applies_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#applies_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#traffic_sign_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:comment xml:lang="en">A traffic sign can refer its regulatory semantics to multiple objects in a scene, e.g. a lane or a vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="de">bezieht_sich_auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#connects -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#connects">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#junction_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Junction"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Road_Network_Segment"/>
+        <rdfs:comment xml:lang="en">A junction connects multiple segments of a road network.</rdfs:comment>
+        <rdfs:label xml:lang="de">verbindet</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_cross_section -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_cross_section">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#road_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Cross_Section"/>
+        <rdfs:comment xml:lang="en">A road can be defined via multiple cross sections along its longitudinal axis. If multiple cross sections for a road are present, one needs to define the lateral offset data property for the cross section as well.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_regelquerschnitt</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_lane -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_lane">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#road_property"/>
+        <owl:inverseOf rdf:resource="http://purl.org/auto/l1_core#has_road"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:label xml:lang="en">A road can be defined as a set of lanes. Therefore, use this object property to point towards those lanes (independently of driving direction).</rdfs:label>
+        <rdfs:label xml:lang="de">hat_streifen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_lane_material -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_lane_material">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Road_Material"/>
+        <rdfs:comment xml:lang="en">A lane can have any number of surface materials.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_streifenmaterial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_predecessor_lane -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_predecessor_lane">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:comment xml:lang="en">Any lane can have number of predecessor lanes that are logically (in the sense of the road network intention) connected to it.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_vorgängerspur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_road -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_road">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:label xml:lang="en">A lane can be assigned to at most one road.</rdfs:label>
+        <rdfs:label xml:lang="de">hat_straße</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_road_material -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_road_material">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#road_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Road_Material"/>
+        <rdfs:label xml:lang="en">A road surface can have any number of materials, e.g. the material mostly present on the road.</rdfs:label>
+        <rdfs:label xml:lang="de">hat_straßenmaterial</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_successor_lane -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_successor_lane">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:comment xml:lang="en">Any lane can have number of successor lanes that are logically (in the sense of the road network intention) connected to it.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_nachfolgespur</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#is_signed_by -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#is_signed_by">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#traffic_sign_property"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:label xml:lang="de">ist_gezeichnet_durch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#junction_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#junction_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#L1_property"/>
+        <rdfs:label xml:lang="de">knotenpunkt_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#lane_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#lane_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#L1_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:comment xml:lang="en">Properties of lanes, e.g. logical connections.</rdfs:comment>
+        <rdfs:label xml:lang="de">spur_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#road_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#road_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#L1_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:comment xml:lang="en">Properties of road, e.g. materials.</rdfs:comment>
+        <rdfs:label xml:lang="de">straße_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#traffic_sign_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#traffic_sign_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#L1_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:comment xml:lang="en">Properties of traffic signs, e.g. markers, signposts, etc.</rdfs:comment>
+        <rdfs:label xml:lang="de">verkehrszeicheneigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l1_core#L1_data_property">
+        <rdfs:label xml:lang="de">L1_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#has_longitudinal_offset -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l1_core#has_longitudinal_offset">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#L1_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Cross_Section"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment>A cross section can have an offset in the longitudinal direction of the road where the cross section starts.</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_longitudinalen_offset</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Additional_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Additional_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="en">A sign giving supplementary information to another sign.</rdfs:comment>
+        <rdfs:label xml:lang="de">Zusatzzeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Cross_Section -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Cross_Section">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:comment xml:lang="en">A cross section of a road is a linear ordering of cross section elements as defined e.g. by constructional guidelines. In total they describe the lateral ordering of the road elements.</rdfs:comment>
+        <rdfs:label xml:lang="de">Regelquerschnitt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Cross_Section_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Cross_Section_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:comment xml:lang="en">Any part of the road that guidelines use as a cross sectional element, e.g. lanes, strips, crossings.</rdfs:comment>
+        <rdfs:label xml:lang="de">Regelquerschnittselement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Crossing_Site -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Crossing_Site">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:comment xml:lang="en">A lane that allow to cross other lanes in approximately orthogonal direction, e.g. a crosswalk.</rdfs:comment>
+        <rdfs:label xml:lang="de">Querungsanlage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Driveable_Lane -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Driveable_Lane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Driveable_Road_Element"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/l1_core#Non_Driveable_Lane"/>
+        <rdfs:comment xml:lang="en">A driveable lane is a lane that is created with the purpose of allowing the modality of driving on it.</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrstreifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Driveable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Driveable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Passable_Road_Element"/>
+        <rdfs:comment xml:lang="en">A passable road element that is intended to be passed by driving.</rdfs:comment>
+        <rdfs:label xml:lang="de">Befahrbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Guidance_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Guidance_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="en">A traffic post that gives advisory reference.</rdfs:comment>
+        <rdfs:label xml:lang="de">Richtzeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Junction -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Junction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Network_Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l1_core#connects"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Road_Network_Segment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">A point in the road network at which multiple road network segments intersect spatially or logically, e.g. a roundabout or intersection of roads.</rdfs:label>
+        <rdfs:label xml:lang="de">Knotenpunkt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#L1_Entität -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Lane -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Lane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Cross_Section_Element"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#ehCoveredBy"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l1_core#Road"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l1_core#has_road"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Road"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A lane is a continuous lateral strip within a road. It can be both drivable or non-drivable. It can be part of a cross section of a road but can also exist independent of a cross section.</rdfs:comment>
+        <rdfs:label xml:lang="de">Streifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Light_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Light_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Active_Illumination_Source"/>
+        <rdfs:comment xml:lang="en">A sign that comes in form of a light emitting the sign&apos;s meaning.</rdfs:comment>
+        <rdfs:label xml:lang="de">Lichtzeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Marker -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Marker">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_color"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/physics#Color"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sign for which color is directly applied to the a surface (e.g. wall or road).</rdfs:comment>
+        <rdfs:label xml:lang="de">Markierung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Non_Driveable_Lane -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Non_Driveable_Lane">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Non_Driveable_Road_Element"/>
+        <rdfs:comment xml:lang="en">A drivable lane is a lane that is created with the purpose of not allowing the modality of driving on it, e.g. divider lanes or parking strips.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nicht_Zu_Befahrender_Streifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Non_Driveable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Non_Driveable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Non_Passable_Road_Element"/>
+        <rdfs:comment xml:lang="en">A road element that is not intended to be passed by driving.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nicht_Befahrbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Non_Passable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Non_Passable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:comment xml:lang="en">A road element that is not designed to be passed by (some subclass of) road users.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nicht_Passierbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Non_Walkable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Non_Walkable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Non_Passable_Road_Element"/>
+        <rdfs:comment xml:lang="en">A road element that is not intended to be passed by walking.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nicht_Begehbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Passable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Passable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:comment xml:lang="en">A road element that is designed to be passed by (a certain subclass of) road users.</rdfs:comment>
+        <rdfs:label xml:lang="de">Passierbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Regulatory_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Regulatory_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="en">A traffic post that gives regulatory reference.</rdfs:comment>
+        <rdfs:label xml:lang="de">Vorschriftszeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Network_Segment"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l1_core#has_lane"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Lane"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A road is defined as a collection of lanes created with the purpose of allowing uni- or bidirectional transportation between two points.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straße</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:comment xml:lang="en">Elements that in total can make up a complete road.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Marker -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Marker">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Marker"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l1_core#applies_to"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.org/auto/l1_core#Lane"/>
+                            <rdf:Description rdf:about="http://purl.org/auto/l1_core#Road"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A sign for which color is directly applied to the the road surface.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenmarkierung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Material -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Material">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Material"/>
+        <rdfs:comment xml:lang="en">The material of which a road mainly consists.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenmaterial</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Network -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Network">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#System"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Junction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Road_Network_Segment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A road network consists of multiple road network segments connected by junctions.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßennetz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Network_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Network_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">The road network is understood as a system that consists of various elements, e.g. roads, lanes, intersections.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßennetzelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Network_Segment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Network_Segment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Network_Element"/>
+        <rdfs:comment xml:lang="en">A road network is naturally partitioned into segments of a set lateral length, e.g. roads or ways.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßennetzsegment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Road_Structure -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Structure">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:comment xml:lang="en">A structure on the road that is necessary for route planning, e.g. a roundabout center, or directly modifies that road&apos;s surface in its structural properties, e.g. a manhole cover.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenkonstrukt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Traffic_Equipment_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Traffic_Equipment_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="deen">A sign that is represented by traffic equipments.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrseinrichtungszeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Traffic_Light -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Traffic_Light">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Light_Sign"/>
+        <rdfs:label xml:lang="de">Lichtsignalanlage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Traffic_Post -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Traffic_Post">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Sign"/>
+        <rdfs:comment xml:lang="en">A sign that comes in form of a post (possibly with a board or plate) that conveys the sign&apos;s meaning.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrsschild</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Traffic_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Traffic_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/communication#Sender"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Element"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:comment xml:lang="en">A sign that has the purpose of guiding the traffic by depicting a connection to a traffic regulation or advise.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrszeichen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Walkable_Road_Element -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Walkable_Road_Element">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Passable_Road_Element"/>
+        <rdfs:comment xml:lang="en">A passable road element that is intended to be passed by walking.</rdfs:comment>
+        <rdfs:label xml:lang="de">Begehbares_Straßenelement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_core#Warning_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#Warning_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="en">A traffic sign which warns of a danger.</rdfs:comment>
+        <rdfs:label xml:lang="de">Gefahrenzeichen</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,694 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l5_core#"
+     xml:base="http://purl.org/auto/l5_core"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l5_core="http://purl.org/auto/l5_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l5_core">
+        <owl:imports rdf:resource="http://purl.org/auto/act"/>
+        <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
+        <owl:imports rdf:resource="http://purl.org/auto/physics"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l5_core#L5_property">
+        <rdfs:label xml:lang="de">L5_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#based_on -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l5_core#based_on">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_property"/>
+        <owl:inverseOf rdf:resource="http://purl.org/auto/l5_core#has_environment_phenomenon"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Event"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:label xml:lang="de">basiert_auf</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_environment_phenomenon -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l5_core#has_environment_phenomenon">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_property"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Event"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:label xml:lang="de">hat_umweltphänomen</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#L5_data_property">
+        <rdfs:label xml:lang="de">L5_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#air_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#air_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Air"/>
+        <rdfs:label xml:lang="de">luft_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_atmospheric_pressure -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_atmospheric_pressure">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#air_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">hPa</physics:unit>
+        <rdfs:comment xml:lang="en">at NN</rdfs:comment>
+        <rdfs:label xml:lang="de">hat_luftdruck</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_cloudiness -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_cloudiness">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#sky_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Sky"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,1]</physics:range>
+        <physics:range xml:lang="en">okta</physics:range>
+        <rdfs:label xml:lang="de">hat_bewölkung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_meteorological_visibility -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_meteorological_visibility">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#air_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Air"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">m</physics:unit>
+        <rdfs:label xml:lang="de">hat_meteorologische_sichtweite</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_relative_humidity -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_relative_humidity">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#air_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <physics:range xml:lang="en">[0,100]</physics:range>
+        <physics:unit xml:lang="en">%</physics:unit>
+        <rdfs:label xml:lang="de">hat_relative_luftfeuchte</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_temperature_2m_height -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_temperature_2m_height">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_temperature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="de">hat_temperatur_auf_2m_höhe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_temperature_5cm_height -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_temperature_5cm_height">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_temperature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="de">hat_temperatur_auf_5cm_höhe</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_wind_direction -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_wind_direction">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#wind_data_property"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,360]</physics:range>
+        <physics:unit xml:lang="en">°</physics:unit>
+        <rdfs:label xml:lang="de">hat_windrichtung</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#has_wind_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#has_wind_speed">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#wind_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Wind"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <physics:range xml:lang="en">[0,\infty)</physics:range>
+        <physics:unit xml:lang="en">m/s</physics:unit>
+        <rdfs:label xml:lang="de">hat_windgeschwindigkeit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#sky_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#sky_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Sky"/>
+        <rdfs:label xml:lang="de">himmel_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#wind_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_core#wind_data_property">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_core#L5_data_property"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Wind"/>
+        <rdfs:label xml:lang="de">wind_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Air -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Air">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Gas"/>
+        <rdfs:label xml:lang="de">Luft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Air_Particle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Air_Particle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Particle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#is_part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Air"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Luftpartikel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Air_Particle_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Air_Particle_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Air_Particle"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Luftpartikelphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Air_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Air_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Air"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Luftphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Artificial_Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Artificial_Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <rdfs:label xml:lang="de">Künstliche_Lichtquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Cloud -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Cloud">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#is_part_of"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Sky"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Wolke</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Cloud_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Cloud_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Cloud"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Wolkenphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Condensed_Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Condensed_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:label xml:lang="de">Kondensierter_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Deposited_Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Deposited_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:label xml:lang="de">Abgelagerter_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Environment -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Environment">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#System"/>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Air"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Moon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l5_core#Sun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Umwelt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Environmental_Event -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Environmental_Event">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/act#Event"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/act#changes_discrete_state_of"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="de">An environmental event is an event that changes the discrete state of some environmental object. Note that it can also change the state of other entities.</rdfs:comment>
+        <rdfs:label xml:lang="de">Umweltereignis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Environmental_Object -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Environmental_Object">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Physical_Object"/>
+        <rdfs:label xml:lang="de">Umweltobjekt</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Environmental_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Environmental_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
+        <rdfs:label xml:lang="de">Umweltphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Falling_Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Falling_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:label xml:lang="de">Fallender_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Ground -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Ground">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+        <rdfs:label xml:lang="de">Boden</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Ground_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Ground_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Ground"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Bodenphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#L5_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#L5_Entity">
+        <rdfs:label xml:lang="de">L5_Entität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Light_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Light_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Lichtphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Lightning -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Lightning">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Natural_Illumination_Source"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Active_Illumination_Source"/>
+        <rdfs:label xml:lang="de">Blitz</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Moon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Moon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Natural_Illumination_Source"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Passive_Illumination_Source"/>
+        <rdfs:label xml:lang="de">Mond</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Moon_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Moon_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Moon"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Mondphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Natural_Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Natural_Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <rdfs:label xml:lang="de">Natürliche_Lichtquelle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Weather_Phenomenon"/>
+        <rdfs:label xml:lang="de">Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Set_Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Set_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:label xml:lang="de">Abgesetzter_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Sky -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Sky">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+        <rdfs:label xml:lang="de">Himmel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Sky_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Sky_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Sky"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Himmelsphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Sun -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Sun">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Natural_Illumination_Source"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Active_Illumination_Source"/>
+        <rdfs:label xml:lang="de">Sonne</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Sun_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Sun_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Sun"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Sonnenphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Weather_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Weather_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:label xml:lang="de">Wetterphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Whirled_Precipitation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Whirled_Precipitation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Precipitation"/>
+        <rdfs:label xml:lang="de">Aufgewirbelter_Niederschlag</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Wind -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Wind">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l5_core#Wind_Phenomenon -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l5_core#Wind_Phenomenon">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l5_core#based_on"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Wind"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="de">Windphänomen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illumination_Source -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#Illumination_Source">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Air"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Air_Particle"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Cloud"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Ground"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Moon"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Sky"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Sun"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Wind"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environment"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Event"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Object"/>
+            <rdf:Description rdf:about="http://purl.org/auto/l5_core#Environmental_Phenomenon"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

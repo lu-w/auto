@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://purl.org/auto/l2_core#"
+     xml:base="http://purl.org/auto/l2_core"
+     xmlns:WV="http://www.wurvoc.org/vocabularies/WV/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:l2_core="http://purl.org/auto/l2_core#"
+     xmlns:physics="http://purl.org/auto/physics#">
+    <owl:Ontology rdf:about="http://purl.org/auto/l2_core">
+        <owl:imports rdf:resource="http://purl.org/auto/physics"/>
+        <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_property -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l2_core#L2_property">
+        <rdfs:label xml:lang="de">L2_eigenschaft</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_data_property -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l2_core#L2_data_property">
+        <rdfs:label xml:lang="de">L2_dateneigenschaft</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Guidance_System -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Guidance_System">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#Traffic_Support_System"/>
+        <rdfs:comment xml:lang="en">A system that guides traffic not through its regulating or advising effect but through its spatial properties.</rdfs:comment>
+        <rdfs:label xml:lang="de">Leiteinrichtung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#L2_Entity -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#L2_Entity">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
+        <rdfs:label xml:lang="de">L2_Entität</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Lighting_System -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Lighting_System">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#Traffic_Support_System"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Illumination_Source"/>
+        <rdfs:comment xml:lang="en">A system that supports traffic through its illuminative properties.</rdfs:comment>
+        <rdfs:label xml:lang="de">Beleuchtungseinrichtung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Road_Construction -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Road_Construction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:comment xml:lang="en">A human-made construction that is permanently installed as an integral part of the shape of the road infrastructure but not placed alongside the road, e.g. a tunnel.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenbebauung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Road_Furniture -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Road_Furniture">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:comment xml:lang="en">A piece of equipment that is installed near roads for non-traffic guiding purposes, e.g. benches or bins.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenmöbel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Road_Side_Vegetation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Road_Side_Vegetation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#Vegetation"/>
+        <rdfs:comment xml:lang="en">A vegetation that is placed alongside the road or on specially designated vegetation strips on roads.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrsbegleitgrün</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Roadside_Construction -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Roadside_Construction">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:comment xml:lang="en">A human-made construction that is permanently installed on the road side, e.g. buildings and walls.</rdfs:comment>
+        <rdfs:label xml:lang="de">Straßenrandbebauung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Traffic_Support_System -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Traffic_Support_System">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:comment xml:lang="en">A construction whose purpose it is to support the traffic e.g. by increasing safety but is not a major part of the road infrastructure, e.g. traffic lights and guard rails.</rdfs:comment>
+        <rdfs:label xml:lang="de">Verkehrsunterstützendes_System</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Vegetation -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Vegetation">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:label xml:lang="de">Vegetation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_core#Water_Body -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_core#Water_Body">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Liquid"/>
+        <rdfs:comment xml:lang="en">A human-made or natural accumulation of larger amounts of water that are mostly permanent (i.e. not a puddle etc.).</rdfs:comment>
+        <rdfs:label xml:lang="de">Gewässer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/physics#Illumination_Source -->
+
+    <owl:Class rdf:about="http://purl.org/auto/physics#Illumination_Source"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
