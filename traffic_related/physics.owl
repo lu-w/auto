@@ -33,6 +33,42 @@
     
 
 
+    <!-- http://purl.org/auto/physics#has_maximum_speed -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#has_maximum_speed">
+        <unit xml:lang="en">The assumed maximum speed of a class of dynamical objects. 
+Note that this can be an average or a rough estimation, i.e. depending on the actual type of the object, it can vary.</unit>
+        <unit xml:lang="en">km/h</unit>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_maximum_yaw -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#has_maximum_yaw">
+        <unit xml:lang="en">°</unit>
+        <rdfs:comment xml:lang="en">The assumed maximum yaw of a class of dynamical objects. 
+Note that this can be an average or a rough estimation, i.e. depending on the actual type of the object, it can vary.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.org/auto/physics#has_maximum_yaw_rate -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#has_maximum_yaw_rate">
+        <unit xml:lang="en">°/s</unit>
+        <rdfs:comment xml:lang="en">The assumed maximum yaw rate of class of dynamical objects. 
+Note that this can be an average or a rough estimation, i.e. depending on the actual type of the object, it can vary.</rdfs:comment>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.org/auto/physics#range -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#range">

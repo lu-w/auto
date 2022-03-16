@@ -14,6 +14,30 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/auto/policy#has_speed_limit -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/policy#has_speed_limit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">The speed limit implied by traffic rules. 
+Can be assigned to arbitrary objects and is not bound to e.g. a certain area. 
+For example, a truck can have a speed limit of 80 km/h whereas a car can have a speed limit of 130 km/h in the same scene.
+Can also be applied to e.g. a scene in total.</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
