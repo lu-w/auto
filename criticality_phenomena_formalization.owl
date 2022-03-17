@@ -192,7 +192,7 @@ This is an implementation specific relation.</rdfs:comment>
             </owl:Restriction>
         </owl:equivalentClass>
         <cp:formalized rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cp:formalized>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.CP_150</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&apos;CP_150&apos;: [x]} for x in subject.CP_150]</object_extraction_code>
     </rdf:Description>
     
 
@@ -211,7 +211,7 @@ This is an implementation specific relation.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.is_occluded_by + subject.is_occluded_for</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&quot;is_occluded_by&quot;: subject.is_occluded_by, &quot;is_occluded_for&quot;: subject.is_occluded_for}]</object_extraction_code>
         <subject_extraction_code>subjects = subject.is_occluded</subject_extraction_code>
     </rdf:Description>
     
@@ -231,7 +231,7 @@ This is an implementation specific relation.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.is_occluded_by + subject.is_occluded_for</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&quot;is_occluded_by&quot;: subject.is_occluded_by, &quot;is_occluded_for&quot;: subject.is_occluded_for}]</object_extraction_code>
         <subject_extraction_code>subjects = subject.is_occluded</subject_extraction_code>
     </rdf:Description>
     
@@ -247,7 +247,7 @@ This is an implementation specific relation.</rdfs:comment>
             </owl:Restriction>
         </owl:equivalentClass>
         <cp:formalized rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</cp:formalized>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.CP_163</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&apos;CP_163&apos;: [x]} for x in subject.CP_163]</object_extraction_code>
     </rdf:Description>
     
 
@@ -271,7 +271,7 @@ This is an implementation specific relation.</rdfs:comment>
 
     <rdf:Description rdf:about="http://purl.org/auto/criticality_phenomena#CP_25">
         <owl:equivalentClass rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.is_occluded_by + subject.is_occluded_for</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&quot;is_occluded_by&quot;: subject.is_occluded_by, &quot;is_occluded_for&quot;: subject.is_occluded_for}]</object_extraction_code>
         <subject_extraction_code>subjects = subject.is_occluded</subject_extraction_code>
     </rdf:Description>
     
@@ -291,7 +291,7 @@ This is an implementation specific relation.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.is_occluded_by + subject.is_occluded_for</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&quot;is_occluded_by&quot;: subject.is_occluded_by, &quot;is_occluded_for&quot;: subject.is_occluded_for}]</object_extraction_code>
         <subject_extraction_code>subjects = subject.is_occluded</subject_extraction_code>
     </rdf:Description>
     
@@ -311,7 +311,7 @@ This is an implementation specific relation.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = subject.is_occluded_by + subject.is_occluded_for</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&quot;is_occluded_by&quot;: subject.is_occluded_by, &quot;is_occluded_for&quot;: subject.is_occluded_for}]</object_extraction_code>
         <subject_extraction_code>subjects = subject.is_occluded</subject_extraction_code>
     </rdf:Description>
     
@@ -331,7 +331,7 @@ This is an implementation specific relation.</rdfs:comment>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <object_extraction_code>objects = subject.has_intersecting_path</object_extraction_code>
+        <object_extraction_code>objects = [{&apos;has_intersecting_path&apos;: [x]} for x in subject.has_intersecting_path]</object_extraction_code>
     </rdf:Description>
     
 
@@ -442,7 +442,7 @@ This is an implementation specific relation.</rdfs:comment>
     <rdf:Description rdf:about="http://purl.org/auto/criticality_phenomena#CP_69">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_143"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Interval"/>
-        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [x for x in subject.sfIntersects if len([y for y in x.is_a if str(y) == &quot;l1_de.Pedestrian_Crossing&quot;]) &gt; 0]</object_extraction_code>
+        <object_extraction_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objects = [{&apos;pedestrian_crossing&apos; : [x]} for x in subject.sfIntersects if len([y for y in x.is_a if str(y) == &quot;l1_de.Pedestrian_Crossing&quot;]) &gt; 0]</object_extraction_code>
         <rdfs:comment xml:lang="en">Formalized via SWRL rule.</rdfs:comment>
     </rdf:Description>
     
