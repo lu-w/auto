@@ -1294,11 +1294,11 @@ In our context, it is defined as a distance of less than 2 meters between both s
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/auto/physics#Dynamical_Object"/>
-                    <owl:Class>
-                        <owl:complementOf>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
-                                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:datatypeComplementOf>
                                     <rdfs:Datatype>
                                         <owl:oneOf>
                                             <rdf:Description>
@@ -1308,10 +1308,10 @@ In our context, it is defined as a distance of less than 2 meters between both s
                                             </rdf:Description>
                                         </owl:oneOf>
                                     </rdfs:Datatype>
-                                </owl:someValuesFrom>
-                            </owl:Restriction>
-                        </owl:complementOf>
-                    </owl:Class>
+                                </owl:datatypeComplementOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
