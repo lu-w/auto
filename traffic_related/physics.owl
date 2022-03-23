@@ -893,6 +893,18 @@ In our context, it is defined as a distance of less than 2 meters between both s
     
 
 
+    <!-- http://purl.org/auto/physics#has_mass -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_mass">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <range>[0, \infty)</range>
+        <unit>kg</unit>
+        <rdfs:label xml:lang="de">hat_masse</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://purl.org/auto/physics#has_pitch -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_pitch">

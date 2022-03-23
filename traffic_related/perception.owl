@@ -420,6 +420,27 @@
     <!-- http://purl.org/auto/perception#Is_Full_Occlusion -->
 
     <owl:Class rdf:about="http://purl.org/auto/perception#Is_Full_Occlusion">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/perception#Is_Occlusion"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/perception#has_occlusion_rate"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:oneOf>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </owl:oneOf>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
         <rdfs:label xml:lang="de">Ist_Vollständige_Verdeckung</rdfs:label>
     </owl:Class>
