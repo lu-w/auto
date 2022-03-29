@@ -186,6 +186,7 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Automated_Driving_Function">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Driver"/>
+        <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Human_Driver"/>
         <rdfs:comment xml:lang="en">A vehicle can also be driven by an automated driving function.</rdfs:comment>
         <rdfs:label xml:lang="de">Automatisierte_Fahrfunktion</rdfs:label>
     </owl:Class>
@@ -239,6 +240,15 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Human">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Participant"/>
         <rdfs:label xml:lang="de">Mensch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l4_core#Human_Driver -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l4_core#Human_Driver">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Driver"/>
+        <rdfs:label xml:lang="de">Menschlicher_Fahrender</rdfs:label>
     </owl:Class>
     
 
@@ -313,13 +323,6 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Pedestrian">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A human traffic participant that does not drive a vehicle.</rdfs:comment>
         <rdfs:label xml:lang="de">Zu_Fuß_Gehender</rdfs:label>
     </owl:Class>

@@ -66,6 +66,30 @@
     
 
 
+    <!-- http://purl.org/auto/l4_core#Pedestrian -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Pedestrian">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Vulnerable_Road_User"/>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</physics:has_maximum_speed>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/l4_core#Traffic_Maneuver -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Maneuver">
@@ -135,7 +159,7 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Driver"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
                         <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_de#Bicycle"/>
@@ -143,6 +167,8 @@
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Driver"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Vulnerable_Road_User"/>
         <rdfs:label xml:lang="de">Radfahrender</rdfs:label>
     </owl:Class>
     
@@ -833,44 +859,7 @@
     <!-- http://purl.org/auto/l4_de#Vulnerable_Road_User -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Vulnerable_Road_User">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
-                            <owl:Class>
-                                <owl:complementOf>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
-                                        <owl:someValuesFrom>
-                                            <owl:Class>
-                                                <owl:unionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
-                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Partially_Motorized_Vehicle"/>
-                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_de#Pedelec"/>
-                                                    <rdf:Description rdf:about="http://purl.org/auto/l4_de#Personal_Mobility_Device"/>
-                                                </owl:unionOf>
-                                            </owl:Class>
-                                        </owl:someValuesFrom>
-                                    </owl:Restriction>
-                                </owl:complementOf>
-                            </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Human"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
-                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_de#Bicycle"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Participant"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
         <rdfs:label xml:lang="de">Ungeschützter_Verkehrsteilnehmer</rdfs:label>
     </owl:Class>
     
@@ -891,20 +880,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Animal"/>
         <rdfs:label xml:lang="de">Wildtier</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/l4_core#Pedestrian">
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</physics:has_maximum_speed>
-    </rdf:Description>
     
 
 
