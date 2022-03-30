@@ -51,6 +51,7 @@
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Behavioral Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Verhaltens_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -62,9 +63,9 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_255"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</dcterms:identifier>
-        <rdfs:comment xml:lang="en">A TP needs to interact with public transport vehicles, e.g. (touring-)busses, tram</rdfs:comment>
-        <rdfs:label xml:lang="en">Interaction With Public Transport</rdfs:label>
-        <rdfs:label xml:lang="de">Interaktion mit öffentlichen Verkehrsmitteln</rdfs:label>
+        <rdfs:comment xml:lang="en">Public transport vehicles show special behaviour which must be responded to.</rdfs:comment>
+        <rdfs:label xml:lang="en">Behaviour of public transport vehicles</rdfs:label>
+        <rdfs:label xml:lang="de">Verhalten von öffentlichen Verkehrsmitteln</rdfs:label>
     </owl:Class>
     
 
@@ -72,12 +73,12 @@
     <!-- http://purl.org/auto/criticality_phenomena#CP_1 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_1">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_255"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_0"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</dcterms:identifier>
-        <rdfs:comment xml:lang="en">A TP needs to interact with a vehicle not usually observed in traffic, e.g. carriage, squad, recumbent, trailer, motorcycle with passenger seat, high wheeler, ...</rdfs:comment>
-        <rdfs:label xml:lang="en">Interaction With Nonordinary Vehicles</rdfs:label>
-        <rdfs:label xml:lang="de">Interaktion mit nicht-gewöhnlichen Fahrzeugen</rdfs:label>
+        <rdfs:comment xml:lang="en">A bus is indicating to its left. It therefore has right of way.</rdfs:comment>
+        <rdfs:label xml:lang="en">Left indicating bus</rdfs:label>
+        <rdfs:label xml:lang="de">Links blinkender Bus</rdfs:label>
     </owl:Class>
     
 
@@ -343,14 +344,14 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_117 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_117">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_214"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_255"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">117</dcterms:identifier>
-        <rdfs:comment xml:lang="en">A TP needs to interact with an emergency vehicle, e.g. react to police/fire brigade and associated signals (blue light, sirens, ...)</rdfs:comment>
-        <rdfs:label xml:lang="en">Interaction With Emergency Vehicles</rdfs:label>
-        <rdfs:label xml:lang="de">Interaktion mit Einsatzfahrzeugen</rdfs:label>
+        <rdfs:comment xml:lang="en">Emergency vehicles how behavior like sirens which must be responded to.</rdfs:comment>
+        <rdfs:label xml:lang="en">Behavior of Emergency Vehicles</rdfs:label>
+        <rdfs:label xml:lang="de">Verhalten von Einsatzfahrzeugen</rdfs:label>
     </owl:Class>
     
 
@@ -362,9 +363,9 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">118</dcterms:identifier>
-        <rdfs:comment xml:lang="en">A TP needs to interact with a service vehicle with yellow warning lights; e.g. waste collection, heavy loads </rdfs:comment>
-        <rdfs:label xml:lang="en">Interaction With ServIce Vehicles</rdfs:label>
-        <rdfs:label xml:lang="de">Interaktion mit Service-Fahrzeugen (gelbes Licht)</rdfs:label>
+        <rdfs:comment xml:lang="en">Service vehicles show special behaviour which must be responded to.</rdfs:comment>
+        <rdfs:label xml:lang="en">Behaviour of service vehicles</rdfs:label>
+        <rdfs:label xml:lang="de">Verhalten von Service Fahrzeugen</rdfs:label>
     </owl:Class>
     
 
@@ -382,7 +383,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">12</dcterms:identifier>
         <rdfs:comment xml:lang="en">The road conditions on the surface, such as wet, (black) ice, snowy, aquaplaning, ...</rdfs:comment>
         <rdfs:label xml:lang="en">Deposited Precipitation</rdfs:label>
-        <rdfs:label xml:lang="de">Witterungsverhältnisse auf der Straße</rdfs:label>
+        <rdfs:label xml:lang="de">Flüssigkeitsablagerung auf der Straße</rdfs:label>
     </owl:Class>
     
 
@@ -391,7 +392,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_13">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_189"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">13</dcterms:identifier>
         <rdfs:comment xml:lang="en">Fog is a visible aerosol consisting of tiny water droplets or ice crystals suspended in the air at or near the Earth&apos;s surface. Fog shows up when water vapor (water in its gaseous form) condenses. Fog can be considered a type of low-lying cloud usually resembling stratus, and is heavily influenced by nearby bodies of water, topography, and wind conditions.</rdfs:comment>
@@ -429,7 +430,9 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_14 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_14">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">14</dcterms:identifier>
         <rdfs:comment xml:lang="en">The intensity and direction of the wind. </rdfs:comment>
         <rdfs:label xml:lang="de">Wind</rdfs:label>
@@ -573,7 +576,13 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_15 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_15">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Camera_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Algorithm_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Radar_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">15</dcterms:identifier>
         <rdfs:comment xml:lang="en">The presence and intensity of snowfall or snow on the road.</rdfs:comment>
         <rdfs:label xml:lang="de">Schnee</rdfs:label>
@@ -721,7 +730,12 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_16 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_16">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Camera_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Algorithm_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Radar_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">16</dcterms:identifier>
         <rdfs:comment xml:lang="en">The presence and intensity of hail.</rdfs:comment>
         <rdfs:label xml:lang="de">Hagel</rdfs:label>
@@ -798,7 +812,8 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_165 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_165">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_214"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">165</dcterms:identifier>
         <rdfs:comment xml:lang="en">A situation in which the right of way can not be solved through the application of the traffic rules. Communication of the TPs will be necessary.</rdfs:comment>
@@ -861,7 +876,13 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_17 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_17">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Camera_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Algorithm_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Radar_Criticality_Phenomenon"/>
         <formalized rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</formalized>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">17</dcterms:identifier>
         <rdfs:comment xml:lang="en">The presence and intensity of rain.</rdfs:comment>
@@ -874,12 +895,12 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_170 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_170">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_214"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_117"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">170</dcterms:identifier>
-        <rdfs:comment xml:lang="en">Situations in which traffic rules apply that give one TP a higher priority in the right of way, e.g. an emergency vehicle. In particular correct interpretation in confusing situations.</rdfs:comment>
-        <rdfs:label xml:lang="en">Overriding Right-of-way</rdfs:label>
-        <rdfs:label xml:lang="de">Vorrangige Vorfahrt</rdfs:label>
+        <rdfs:comment xml:lang="en">Blue lights and siren signalize the priority of the emergency vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="de">Blaulicht und Sirene</rdfs:label>
+        <rdfs:label xml:lang="en">Blue lights and siren</rdfs:label>
     </owl:Class>
     
 
@@ -1039,8 +1060,9 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_181 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_181">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_286"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">181</dcterms:identifier>
         <rdfs:comment xml:lang="en">A building exists in proximity to the road in which a larger number of URUs is present, e.g. kindergarden, school, retirement home, disabled home.</rdfs:comment>
@@ -1108,6 +1130,8 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_18"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">186</dcterms:identifier>
+        <rdfs:comment xml:lang="en">There is little global light at night. Therefore, light-dependent sensors such as the camera can be affected.</rdfs:comment>
+        <rdfs:label xml:lang="de">Nacht</rdfs:label>
         <rdfs:label xml:lang="en">Night</rdfs:label>
     </owl:Class>
     
@@ -1119,6 +1143,8 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_18"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">187</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Dusk is the time of the beginning of twilight after sundown. It is related to scattered, diffused light. Therefore it might affect the capabilitiy of light sensitive sensors.</rdfs:comment>
+        <rdfs:label xml:lang="de">Abenddämmerung</rdfs:label>
         <rdfs:label xml:lang="en">Dusk</rdfs:label>
     </owl:Class>
     
@@ -1130,7 +1156,9 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_18"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">188</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Dawn is the time of the beginning of twilight before sunrise. It is related to scattered, diffused light. Therefore it might affect the capabilitiy of light sensitive sensors.</rdfs:comment>
         <rdfs:label xml:lang="en">Dawn</rdfs:label>
+        <rdfs:label xml:lang="de">Morgendämmerung</rdfs:label>
     </owl:Class>
     
 
@@ -1143,6 +1171,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Human_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Lidar_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">189</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Air particles are microscopic particles of solid or liquid matter suspended in the air. They might affect the capability of sensors to return the right data.</rdfs:comment>
         <rdfs:label xml:lang="en">Air Particle</rdfs:label>
         <rdfs:label xml:lang="de">Luftpartikel</rdfs:label>
     </owl:Class>
@@ -1167,9 +1196,10 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_190 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_190">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_189"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">190</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Dust particles in the surrounding air. Might affect sensor data.</rdfs:comment>
         <rdfs:label xml:lang="en">Dust</rdfs:label>
         <rdfs:label xml:lang="de">Staub</rdfs:label>
     </owl:Class>
@@ -1182,6 +1212,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_189"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">191</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Sandparticle in the surrounding air. Might affect sensor data.</rdfs:comment>
         <rdfs:label xml:lang="de">Sand</rdfs:label>
         <rdfs:label xml:lang="en">Sand</rdfs:label>
     </owl:Class>
@@ -1196,7 +1227,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Human_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">192</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">A road user is blinded by the high beam of another road user. In the case of a human driver, this can have an impact on driving behavior. In the case of an automated vehicle, light-sensing sensors such as the camera or lidar can be affected.</rdfs:comment>
         <rdfs:label xml:lang="de">Blendung durch Fernlicht eines anderen TPs</rdfs:label>
         <rdfs:label xml:lang="en">Glare Due To High Beam Of Non-Ego-TP</rdfs:label>
     </owl:Class>
@@ -1209,7 +1240,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_185"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">193</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">A layer of water builds between the wheels of the vehicle and the road surface. This leads to loss of traction which then leads to the vehicle not responding to control.</rdfs:comment>
         <rdfs:label xml:lang="de">Aquaplaning</rdfs:label>
         <rdfs:label xml:lang="en">Aquaplaning</rdfs:label>
     </owl:Class>
@@ -1365,7 +1396,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_202">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">202</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">A wet road is a road whose surface is wetted with a liquid. This can lead to a loss of road friction.</rdfs:comment>
         <rdfs:label xml:lang="de">Nasse Straße</rdfs:label>
         <rdfs:label xml:lang="en">Wet Road</rdfs:label>
     </owl:Class>
@@ -1375,9 +1406,10 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_203 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_203">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">203</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">An icy road is covered with a film of ice. This affects road friction and the response to steering and braking maneuvers as well as the response to acceleration.</rdfs:comment>
         <rdfs:label xml:lang="en">Icy Road</rdfs:label>
         <rdfs:label xml:lang="de">Vereiste Straße</rdfs:label>
     </owl:Class>
@@ -1454,7 +1486,11 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_21 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_21">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Camera_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Radar_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">21</dcterms:identifier>
         <rdfs:comment xml:lang="en">A change in temperature during a scenario, e.g. direct sun exposure of vehicle parts in hot climates. Criticality depends on intensity and degraded functionality of system components.</rdfs:comment>
         <rdfs:label xml:lang="en">Extreme (change In) Temperature</rdfs:label>
@@ -1522,11 +1558,12 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_214 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_214">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_285"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_118"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">214</dcterms:identifier>
-        <rdfs:comment xml:lang="en">Situations, in which the Right-of-Way is regulated.</rdfs:comment>
-        <rdfs:label xml:lang="de">Reglung der Vorfahrt</rdfs:label>
-        <rdfs:label xml:lang="en">Regulation Of Right-of-way</rdfs:label>
+        <rdfs:comment xml:lang="en">An additional traffic sign can be set on a pickup truck. Its rules have to be followed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Additional traffic sign on pickup truck</rdfs:label>
+        <rdfs:label xml:lang="de">Zusätzliches Verkehrszeichen auf Pickup</rdfs:label>
     </owl:Class>
     
 
@@ -1873,7 +1910,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_238">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_230"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">238</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">Optical distortion might affect the capability to detect entities correctly.</rdfs:comment>
         <rdfs:label xml:lang="en">Optical Distortion Of Objects</rdfs:label>
         <rdfs:label xml:lang="de">Optische Verzerrung von Objekten</rdfs:label>
     </owl:Class>
@@ -2109,7 +2146,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_254">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_204"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">254</dcterms:identifier>
-        <rdfs:comment xml:lang="en">Unremoved ice sheets on truck roofs may fall down and cause severe accidents, as they usually hit the road 20-50m behind the truck. ToDo: Tags</rdfs:comment>
+        <rdfs:comment xml:lang="en">Unremoved ice sheets on truck roofs may fall down and cause severe accidents, as they usually hit the road 20-50m behind the truck.</rdfs:comment>
         <rdfs:label xml:lang="de">Eisplatten auf LKW Dach</rdfs:label>
         <rdfs:label xml:lang="en">Ice Sheets On Truck Roof</rdfs:label>
     </owl:Class>
@@ -2121,9 +2158,9 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_255">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">255</dcterms:identifier>
-        <rdfs:comment xml:lang="en">A TP needs to interact with another TP.</rdfs:comment>
-        <rdfs:label xml:lang="en">Interaction With Other TP</rdfs:label>
-        <rdfs:label xml:lang="de">Interaktion mit anderen Verkehrsteilnehmern</rdfs:label>
+        <rdfs:comment xml:lang="en">Special vehicles like police cars etc. show special behaviour which must be responded to.</rdfs:comment>
+        <rdfs:label xml:lang="en">Behaviour of special TP</rdfs:label>
+        <rdfs:label xml:lang="de">Verhalten Spezieller TP</rdfs:label>
     </owl:Class>
     
 
@@ -2406,12 +2443,12 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_285 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_285">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">285</dcterms:identifier>
-        <rdfs:comment xml:lang="en">Refers to the regulation of interaction in traffic situations.</rdfs:comment>
-        <rdfs:label xml:lang="en">Traffic Rules for Participant Interaction</rdfs:label>
-        <rdfs:label xml:lang="de">Verkehrsregeln für die Interaktion von Teilnehmern</rdfs:label>
+        <rdfs:comment xml:lang="en">Refers to environmental force like wind which may lead to changed dynamics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Environmental Force</rdfs:label>
+        <rdfs:label xml:lang="de">Umgebungskraft</rdfs:label>
     </owl:Class>
     
 
@@ -2472,8 +2509,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_291 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_291">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_297"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">291</dcterms:identifier>
         <rdfs:comment xml:lang="en">The rescue alley has been collectively formed on wrong side.</rdfs:comment>
         <rdfs:label xml:lang="en">Rescue alley formed on wrong side</rdfs:label>
@@ -2485,8 +2521,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     <!-- http://purl.org/auto/criticality_phenomena#CP_292 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_292">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_297"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">292</dcterms:identifier>
         <rdfs:comment xml:lang="en">The lane assignment is not taken into account by traffic.</rdfs:comment>
         <rdfs:label xml:lang="de">Fahrstreifenzuordnung wird nicht vom Verkehr berücksichtigt</rdfs:label>
@@ -2548,12 +2583,49 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     
 
 
+    <!-- http://purl.org/auto/criticality_phenomena#CP_297 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_297">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">297</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Several road users act wrongly but collectively.</rdfs:comment>
+        <rdfs:label xml:lang="en">Collaborative Misconduct</rdfs:label>
+        <rdfs:label xml:lang="de">Gemeinschaftliches Fehlverhalten</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_298 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_298">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_288"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">298</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to the existence of traffic jam on slip roads.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stau auf Autobahnauffahrten </rdfs:label>
+        <rdfs:label xml:lang="en">Traffic jam on slip roads</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_299 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_299">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_288"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">299</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to the existence of traffic jam on motorway exits.</rdfs:comment>
+        <rdfs:label xml:lang="de">Stau auf Autobahnabfahrten</rdfs:label>
+        <rdfs:label xml:lang="en">Traffic jam on motorway exit</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/criticality_phenomena#CP_3 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_3">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_178"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Complexity_Criticality_Phenomenon"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Temporal_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</dcterms:identifier>
         <rdfs:comment xml:lang="en">A oncoming vehicle has a planned trajectory that intersects with the planned left turn trajectory of ego. Standard situation at urban intersections.</rdfs:comment>
         <rdfs:label xml:lang="de">Gegenverkehr beim Linksabbiegen</rdfs:label>
@@ -2579,6 +2651,134 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     
 
 
+    <!-- http://purl.org/auto/criticality_phenomena#CP_300 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_300">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_288"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">300</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to the existence of traffic jam on specific lanes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Partial traffic jam</rdfs:label>
+        <rdfs:label xml:lang="de">Partieller Stau</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_301 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_301">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">301</dcterms:identifier>
+        <rdfs:comment xml:lang="en">In specific times a higher amount of traffic is present.</rdfs:comment>
+        <rdfs:label xml:lang="de">Hohe Verkehrsdichte</rdfs:label>
+        <rdfs:label xml:lang="en">Rush Hour</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_302 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_302">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">302</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Collars drive under specific rules which are different than the normal rules for driving (e.g. run red traffic lights).</rdfs:comment>
+        <rdfs:label xml:lang="en">Collars</rdfs:label>
+        <rdfs:label xml:lang="de">Kolonnen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_303 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_303">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_287"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">303</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Motorcades might act different than normal traffic.</rdfs:comment>
+        <rdfs:label xml:lang="de">Autokorso</rdfs:label>
+        <rdfs:label xml:lang="en">Motorcade</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_304 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_304">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_297"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Complexity_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">304</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Community driving through a traffic circle in the wrong direction. Might be due to an accident.</rdfs:comment>
+        <rdfs:label xml:lang="en">Community driving through a traffic circle in the wrong direction</rdfs:label>
+        <rdfs:label xml:lang="de">Kreisverkehr in falscher Richtung durchfahren</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_305 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_305">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">305</dcterms:identifier>
+        <rdfs:comment xml:lang="en">TP drives with an open trunk. Might be due to cargo.</rdfs:comment>
+        <rdfs:label xml:lang="de">Offener Kofferraum</rdfs:label>
+        <rdfs:label xml:lang="en">Open trunk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_306 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_306">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">306</dcterms:identifier>
+        <rdfs:comment xml:lang="en">TP drives with overhanging load e.g on top of a car.</rdfs:comment>
+        <rdfs:label xml:lang="en">Overhanging load</rdfs:label>
+        <rdfs:label xml:lang="de">Überhängende Beladung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_307 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_307">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">307</dcterms:identifier>
+        <rdfs:comment xml:lang="en">TP has an open door. Might be during parking or driving.</rdfs:comment>
+        <rdfs:label xml:lang="de">Offene Tür eines TP</rdfs:label>
+        <rdfs:label xml:lang="en">Open door of TP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_308 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_308">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_116"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">308</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Broken tires can lead to changes in the dynamic of vehicles.</rdfs:comment>
+        <rdfs:label xml:lang="en">Broken tires</rdfs:label>
+        <rdfs:label xml:lang="de">Kaputte Reifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_309 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_309">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_115"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">309</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Decreased tread might lead to reduced friction.</rdfs:comment>
+        <rdfs:label xml:lang="en">Decreased tread</rdfs:label>
+        <rdfs:label xml:lang="de">Vermindertes Reifenprofil</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/criticality_phenomena#CP_31 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_31">
@@ -2587,6 +2787,131 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:comment xml:lang="en">This includes pet animals with which collision should be avoided such as dogs and cats</rdfs:comment>
         <rdfs:label xml:lang="de">Haustier auf der Straße</rdfs:label>
         <rdfs:label xml:lang="en">Pet Animal On Road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_310 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_310">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">310</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Unusual appearance (or unusual form) might affect the ability to detect the according TP correctly.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ungewöhnliches Aussehen eines TP</rdfs:label>
+        <rdfs:label xml:lang="en">Unusual appearance of TP</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_311 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_311">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_310"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">311</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A development mule is a car which is often camouflaged. This may lead to problems in detecting the vehicle correctly.</rdfs:comment>
+        <rdfs:label xml:lang="en">Development mule</rdfs:label>
+        <rdfs:label xml:lang="de">Erlkönig (Auto)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_312 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_312">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_310"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">312</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A tuned car is different from the original model. This may lead to changed dynamics as well as changed appearence.</rdfs:comment>
+        <rdfs:label xml:lang="de">Getuntes Fahrzeug </rdfs:label>
+        <rdfs:label xml:lang="en">Tuned vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_313 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_313">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_310"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">313</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Special cars might have sliding doors or no side door. This allows passengers to exit the car without open a door to the side.</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrzeug mit Schiebetür/ ohne Seitentür</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle with sliding door/ without side door</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_314 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_314">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">314</dcterms:identifier>
+        <rdfs:comment xml:lang="en">To enter the highway one has to merge on the right lane.</rdfs:comment>
+        <rdfs:label xml:lang="de">Auffahren auf die Autobahn</rdfs:label>
+        <rdfs:label xml:lang="en">Merging at highway entry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_315 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_315">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">315</dcterms:identifier>
+        <rdfs:comment xml:lang="en">To keep driving one has to merge on continuing lane.</rdfs:comment>
+        <rdfs:label xml:lang="en">Merging at lane end</rdfs:label>
+        <rdfs:label xml:lang="de">Spurwechsel vor Ende einer Spur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_316 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_316">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">316</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to the need of merging on an occupied lane (for example due to traffic jam). For this an estimation of the behavior of the other drivers is needed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Merging into an occupied lane</rdfs:label>
+        <rdfs:label xml:lang="de">Spurwechsel auf eine volle Spur</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_317 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_317">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">317</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A TP cuts in in front of the ego-vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cut-in in front of ego-vehicle</rdfs:label>
+        <rdfs:label xml:lang="de">Einscheren vor dem Ego-Fahrzeug</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_318 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_318">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_216"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">318</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A TP cuts out in front of the ego-vehicle.</rdfs:comment>
+        <rdfs:label xml:lang="de">Ausscheren vor dem Ego-Fahrzeug</rdfs:label>
+        <rdfs:label xml:lang="en">Cut-out in front of ego-vehicle</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_319 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_319">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_208"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Complexity_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">319</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A toll station is located on the road.</rdfs:comment>
+        <rdfs:label xml:lang="de">Mautstelle</rdfs:label>
+        <rdfs:label xml:lang="en">Toll</rdfs:label>
     </owl:Class>
     
 
@@ -2606,6 +2931,121 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
     
 
 
+    <!-- http://purl.org/auto/criticality_phenomena#CP_321 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_321">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">321</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of 52-61 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="en">Moderate gale</rdfs:label>
+        <rdfs:label xml:lang="de">Moderater Sturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_322 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_322">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">322</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of 63-74 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="en">Fresh gale</rdfs:label>
+        <rdfs:label xml:lang="de">Frischer Sturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_323 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_323">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">323</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of 76-87 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="de">Starker Sturm</rdfs:label>
+        <rdfs:label xml:lang="en">Strong gale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_324 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_324">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">324</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of 89-102 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="de">Orkan</rdfs:label>
+        <rdfs:label xml:lang="en">Whole gale</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_325 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_325">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">325</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of 104-117 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="en">Storm</rdfs:label>
+        <rdfs:label xml:lang="de">Sturm</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_326 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_326">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_14"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">326</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Refers to 10-minute sustained winds of &gt;119 km/h. (According to classifications used by Regional Specialized Meteorological Centers worldwide)</rdfs:comment>
+        <rdfs:label xml:lang="en">Hurricane</rdfs:label>
+        <rdfs:label xml:lang="de">Hurrikan</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_327 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_327">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_212"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">327</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Vehicle parts on the road. This could make evasion inevitable.</rdfs:comment>
+        <rdfs:label xml:lang="de">Fahrzeugteile auf der Straße</rdfs:label>
+        <rdfs:label xml:lang="en">Vehicle parts on the road</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_328 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_328">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_164"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">328</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Impact Force refers to force applied by an other TP.</rdfs:comment>
+        <rdfs:label xml:lang="en">Impact Force</rdfs:label>
+        <rdfs:label xml:lang="de">Stoßkraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_329 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_329">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_328"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">329</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Rear-end collision forces the TP in front in driving direktion. Braking might be necessary.</rdfs:comment>
+        <rdfs:label xml:lang="de">Auffahrunfall</rdfs:label>
+        <rdfs:label xml:lang="en">Rear-end collision</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/criticality_phenomena#CP_33 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_33">
@@ -2615,6 +3055,33 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <rdfs:comment xml:lang="en">A pedestrian is crossing the road (whether allowed or not).</rdfs:comment>
         <rdfs:label xml:lang="de">Fußgänger überquert Straße auf direktem Weg</rdfs:label>
         <rdfs:label xml:lang="en">Pedestrian Crossing Road Directly</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_330 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_330">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_328"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">330</dcterms:identifier>
+        <rdfs:comment xml:lang="en">A ball is kicked or thrown against the windshield. This might affect Sensor capability. The shock sensors could also be affected.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ball against windshield</rdfs:label>
+        <rdfs:label xml:lang="de">Ball gegen Windschutzscheibe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/criticality_phenomena#CP_331 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_331">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_328"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Human_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
+        <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">331</dcterms:identifier>
+        <rdfs:comment xml:lang="en">Playing children might push each other onto the road.</rdfs:comment>
+        <rdfs:label xml:lang="en">Playing Children</rdfs:label>
+        <rdfs:label xml:lang="de">Spielende Kinder</rdfs:label>
     </owl:Class>
     
 
@@ -2803,7 +3270,7 @@ May be interpreted as the effect or distracted/impaired driving.</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_47">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_143"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">47</dcterms:identifier>
         <rdfs:comment xml:lang="en">This refers to vehicles carrying either insecure load or are overloaded</rdfs:comment>
         <rdfs:label xml:lang="en">Dangerous Load Of Non-Ego-TP</rdfs:label>
@@ -3005,7 +3472,7 @@ bicyclist illegaly driving on unidirectional road</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_60">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">60</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">A road is covered with a layer of snow. In addition to reducing road friction, this increases the likelihood of a layer of ice under the snow layer and, above a certain thickness, impedes driving behavior.</rdfs:comment>
         <rdfs:label xml:lang="de">Schneebedeckte Straße</rdfs:label>
         <rdfs:label xml:lang="en">Snowy Road</rdfs:label>
     </owl:Class>
@@ -3015,9 +3482,10 @@ bicyclist illegaly driving on unidirectional road</rdfs:comment>
     <!-- http://purl.org/auto/criticality_phenomena#CP_61 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_61">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_12"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_274"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">61</dcterms:identifier>
-        <rdfs:comment xml:lang="en">ToDo</rdfs:comment>
+        <rdfs:comment xml:lang="en">Spray is a whitish mixture of water and air that occurs when the water of natural or artificial bodies of water is agitated by mechanical action. Spray near roadways can affect sensors (e.g., by reflecting and deflecting light through the water droplets).</rdfs:comment>
         <rdfs:label xml:lang="de">Gischt</rdfs:label>
         <rdfs:label xml:lang="en">Spray</rdfs:label>
     </owl:Class>
@@ -3242,7 +3710,8 @@ bicyclist illegaly driving on unidirectional road</rdfs:comment>
     <!-- http://purl.org/auto/criticality_phenomena#CP_77 -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_77">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_214"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Behavioral_Criticality_Phenomenon"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Human_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon"/>
@@ -3362,6 +3831,7 @@ bicyclist illegaly driving on unidirectional road</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#CP_85">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_212"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#CP_275"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">85</dcterms:identifier>
         <rdfs:comment xml:lang="en">A vehicle is present on the road that is not able to move by its own power.</rdfs:comment>
@@ -3591,6 +4061,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Complexity_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Complexity Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Komplexitäts_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3599,6 +4070,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <!-- http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon -->
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon">
+        <rdfs:label xml:lang="en">Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3608,6 +4080,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Dynamical_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Dynamical Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Dynamisches_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3617,6 +4090,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Environmental_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Environmental Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Umwelt_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3626,6 +4100,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Human_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Human Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Menschliches_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3635,6 +4110,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Perception Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Perzeptions_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3645,6 +4121,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Camera_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Perekte_Kamera_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Perfect Camera Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3654,6 +4131,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Human_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Perekter_Mensch_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Perfect Human Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3663,6 +4141,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Lidar_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Perektes_Lidar_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Perfect Lidar Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3671,6 +4150,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Algorithm_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Perfect Perception Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Perfekter_Perzeptionsalgorithmen_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3680,6 +4160,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Perfect erception Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Perfektes_Perzeptions_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3690,6 +4171,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Perfect_Radar_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perfect_Perception_Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Perektes_Radar_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Perfect Radar Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3698,6 +4180,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Camera_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Camera Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Reale_Kamera_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3707,6 +4190,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Human_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Human Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Realer_Mensch_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3716,6 +4200,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Lidar_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Lidar Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Reales_Lidar_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3725,6 +4210,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Perception_Algorithm_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Perception Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Realer_Perzeptionsalgorithmen_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3734,6 +4220,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Perception Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Reales_Perzeptions_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3743,6 +4230,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Real_Radar_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Real_Perception_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Real Radar Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Reales_Radar_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3753,6 +4241,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Spatial_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Räumliches_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Spatial Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3762,6 +4251,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Criticality_Phenomenon"/>
         <rdfs:label xml:lang="de">Getaggtes_Kritikalitätsphänomen</rdfs:label>
+        <rdfs:label xml:lang="en">Tagged Criticality Phenomenon</rdfs:label>
     </owl:Class>
     
 
@@ -3770,6 +4260,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Temporal_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Temporal Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Temporales_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
     
@@ -3779,6 +4270,7 @@ Includes overtaking multiples vehicles without merging back into lane.</rdfs:com
 
     <owl:Class rdf:about="http://purl.org/auto/criticality_phenomena#Unpredictability_Criticality_Phenomenon">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/criticality_phenomena#Tagged_Criticality_Phenomenon"/>
+        <rdfs:label xml:lang="en">Unpredictability Criticality Phenomenon</rdfs:label>
         <rdfs:label xml:lang="de">Unvorhersehbarkeits_Kritikalitätsphänomen</rdfs:label>
     </owl:Class>
 </rdf:RDF>
