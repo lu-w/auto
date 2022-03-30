@@ -223,12 +223,6 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Driver">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Participant"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/l4_core#drives"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A human traffic participant that drives some vehicle in traffic.</rdfs:comment>
         <rdfs:label xml:lang="de">Fahrender</rdfs:label>
     </owl:Class>
