@@ -8707,7 +8707,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Way_Lane -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Way_Lane">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Non_Driveable_Lane"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:label xml:lang="de">Wegstreifen</rdfs:label>
     </owl:Class>
     
