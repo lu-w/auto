@@ -1451,7 +1451,7 @@
                 <rdf:first>
                     <rdf:Description>
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Moderate_Rain"/>
+                        <swrl:classPredicate rdf:resource="http://purl.org/auto/l5_de#Extremely_Heavy_Rain"/>
                         <swrl:argument1 rdf:resource="http://purl.org/auto/l5_de#r"/>
                     </rdf:Description>
                 </rdf:first>

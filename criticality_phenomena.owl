@@ -995,7 +995,7 @@ Examples include bursted tires, brakes, steering, wheels, engine, lighting, towi
         <dcterms:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">177</dcterms:identifier>
         <rdfs:comment xml:lang="en">The scenario contains a pedestrian crossing (meaning both ford and crosswalk)</rdfs:comment>
         <rdfs:label xml:lang="de">Fußgängerfurt/-überweg</rdfs:label>
-        <rdfs:label xml:lang="en">Pedestrian Crossing</rdfs:label>
+        <rdfs:label xml:lang="en">Pedestrian Crossing / Ford</rdfs:label>
     </owl:Class>
     
 

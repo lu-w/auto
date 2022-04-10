@@ -338,7 +338,7 @@ In our context, it is defined as a distance of less than 15 meters between both 
         <rdfs:domain rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
         <rdfs:range rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
         <rdfs:comment xml:lang="en">If one spatial object is close to another. 
-In our context, it is defined as a distance of less than 2 meters between both spatial objects.</rdfs:comment>
+In our context, it is defined as a distance of less than 4 meters between both spatial objects.</rdfs:comment>
         <rdfs:label xml:lang="de">ist_nahe</rdfs:label>
     </owl:ObjectProperty>
     
