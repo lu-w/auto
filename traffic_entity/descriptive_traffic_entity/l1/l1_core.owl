@@ -103,7 +103,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_predecessor_lane">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:comment xml:lang="en">Any lane can have number of predecessor lanes that are logically (in the sense of the road network intention) connected to it.</rdfs:comment>
@@ -141,7 +140,6 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_core#has_successor_lane">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l1_core#lane_property"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:range rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:comment xml:lang="en">Any lane can have number of successor lanes that are logically (in the sense of the road network intention) connected to it.</rdfs:comment>
