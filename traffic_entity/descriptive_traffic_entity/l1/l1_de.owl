@@ -5307,6 +5307,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Pedestrian_Crossing">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Crossing_Site"/>
+        <rdfs:comment>A pedestrian crossing as defined by § 26 VwV-StVO.</rdfs:comment>
         <rdfs:label xml:lang="de">Fußgängerübergang</rdfs:label>
     </owl:Class>
     
@@ -5316,6 +5317,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Pedestrian_Ford">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Crossing_Site"/>
+        <rdfs:comment>A pedestrian ford as defined by § 25 VwV-StVO.</rdfs:comment>
         <rdfs:label xml:lang="de">Fußgängerfurt</rdfs:label>
     </owl:Class>
     

@@ -271,6 +271,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
         <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Partially_Motorized_Vehicle"/>
+        <rdfs:comment xml:lang="en">A vehicle that has a motor that can propel the vehicle forward. The vehicle shall also be designed to be driven (also temporarily) on roads.</rdfs:comment>
         <rdfs:label xml:lang="de">Motorisiertes_Fahrzeug</rdfs:label>
     </owl:Class>
     

@@ -245,6 +245,7 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l2_de#Kindergarten">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#Building"/>
+        <rdfs:comment xml:lang="en">A facility in which children, typically below ages of 6 years, are cared for during (parts of) the day.</rdfs:comment>
         <rdfs:label xml:lang="de">Kindergarten</rdfs:label>
     </owl:Class>
     
@@ -420,6 +421,7 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l2_de#Retirement_Home">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#Building"/>
+        <rdfs:comment xml:lang="en">A facility in which retired persons are cared for (in-patient).</rdfs:comment>
         <rdfs:label xml:lang="de">Altersheim</rdfs:label>
     </owl:Class>
     
@@ -468,6 +470,7 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l2_de#School">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#Building"/>
+        <rdfs:comment xml:lang="en">A facility in which children and young persons, typically above ages of 6 years, are educated during (parts of) the day.</rdfs:comment>
         <rdfs:label xml:lang="de">Schule</rdfs:label>
     </owl:Class>
     

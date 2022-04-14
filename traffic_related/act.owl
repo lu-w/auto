@@ -75,6 +75,8 @@
         <owl:inverseOf rdf:resource="http://purl.org/auto/act#conducts"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/act#Activity"/>
         <rdfs:range rdf:resource="http://purl.org/auto/act#Actor"/>
+        <rdfs:comment xml:lang="en">An activity can be conducted by (a set of) actors that are causative for the activity to happen. 
+Example: A left turn on an intersection is conducted by the vehicle turning left.</rdfs:comment>
         <rdfs:label xml:lang="de">ausgefuehrt_von</rdfs:label>
     </owl:ObjectProperty>
     
@@ -106,6 +108,8 @@
         <owl:inverseOf rdf:resource="http://purl.org/auto/act#participates_in"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/act#Activity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:comment xml:lang="en">Things can actively or passively participate in activities. Those things are not causative for the activity (i.e. are not the main driver), but play a certain role in it. 
+Example: A driving vehicle is passing three parking vehicles, which are the participants of the driving vehicle&apos;s passing activity.</rdfs:comment>
         <rdfs:label xml:lang="de">hat_teilnehmer</rdfs:label>
     </owl:ObjectProperty>
     

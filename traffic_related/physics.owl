@@ -706,6 +706,7 @@ In our context, it is defined as a distance of less than 4 meters between both s
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_position_based_property"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <unit>m/s^2</unit>
+        <rdfs:comment>The norm of the acceleration vector respecting the direction of acceleration w.r.t. the object&apos;s yaw (therefore, can become negative).</rdfs:comment>
         <rdfs:label xml:lang="de">hat_beschleunigung</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -981,7 +982,7 @@ In our context, it is defined as a distance of less than 4 meters between both s
         <rdfs:domain rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <unit xml:lang="en">m/s</unit>
-        <rdfs:comment xml:lang="en">Norm of velocity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The norm of the velocity vector respecting the direction of velocity w.r.t. the object&apos;s yaw (therefore, can become negative).</rdfs:comment>
         <rdfs:label xml:lang="de">hat_schnelligkeit</rdfs:label>
     </owl:DatatypeProperty>
     

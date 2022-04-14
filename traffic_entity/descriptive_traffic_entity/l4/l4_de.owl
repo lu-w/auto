@@ -177,6 +177,7 @@
         <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw_rate>
+        <rdfs:comment xml:lang="en">A vehicle without a motor that has two wheels and is propelled by human labor.</rdfs:comment>
         <rdfs:label xml:lang="de">Fahrrad</rdfs:label>
     </owl:Class>
     

@@ -154,6 +154,7 @@ Each traffic entity is defined for exactly one point in time. To model that an i
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_model#traffic_model_element_property"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/traffic_model#Traffic_Model_Element"/>
         <rdfs:range rdf:resource="http://purl.org/auto/traffic_model#Traffic_Model"/>
+        <rdfs:comment xml:lang="en">Traffic model elements can be part of a traffic model, e.g. a vehicle can be part of a scene.</rdfs:comment>
         <rdfs:label xml:lang="de">in_verkehrsmodell</rdfs:label>
     </owl:ObjectProperty>
     
