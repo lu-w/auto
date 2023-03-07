@@ -17,11 +17,6 @@ The broad spectrum of urban road traffic covers many concepts that are related t
 They include (but are not limited to) perception, communication, policies, physics, and temporal aspects. 
 These concepts, which naturally interact with traffic, are used within the formalized 6-Layer Model.
 
-### Traffic Model (`traffic_model`)
-
-We use the traffic entities and their related concepts to create some traffic model, e.g. a scene, a situation, or a scenario. 
-The traffic model ontology contains a formalization of this terminology.
-
 ### A.U.T.O.
 
 On the top level, we define three ontologies:

@@ -15,11 +15,9 @@
      xmlns:l4_core="http://purl.org/auto/l4_core#"
      xmlns:physics="http://purl.org/auto/physics#">
     <owl:Ontology rdf:about="http://purl.org/auto/l4_core">
-        <owl:imports rdf:resource="http://purl.org/auto/act"/>
         <owl:imports rdf:resource="http://purl.org/auto/perception"/>
         <owl:imports rdf:resource="http://purl.org/auto/physics"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
-        <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
     </owl:Ontology>
     
 
@@ -152,29 +150,10 @@
     
 
 
-    <!-- http://purl.org/auto/act#Activity -->
-
-    <owl:Class rdf:about="http://purl.org/auto/act#Activity"/>
-    
-
-
-    <!-- http://purl.org/auto/act#Actor -->
-
-    <owl:Class rdf:about="http://purl.org/auto/act#Actor"/>
-    
-
-
     <!-- http://purl.org/auto/l4_core#Animal -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Animal">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Subject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/act#has_intent"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://purl.org/auto/act#Intent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Human"/>
         <rdfs:comment xml:lang="en">A non-human animal therefore not having a traffic-related intention.</rdfs:comment>
         <rdfs:label xml:lang="de">Tier</rdfs:label>
@@ -327,39 +306,9 @@
     <!-- http://purl.org/auto/l4_core#Traffic_Event -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Event">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/act#Event"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#L4_Entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/act#changes_discrete_state_of"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Object"/>
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Subject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A traffic event is an event within the traffic system that therefore changes the discrete state of some traffic object or subject.</rdfs:comment>
         <rdfs:label xml:lang="de">Verkehrsereignis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_core#Traffic_Maneuver -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Maneuver">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Process"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/act#conducted_by"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l4_core#Traffic_Subject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A maneuver is an activity that is performed by an acteur in traffic with the intention to fulfil one of its goals within the traffic system (e.g. performance or safety).</rdfs:comment>
-        <rdfs:label xml:lang="de">Verkehrsmanöver</rdfs:label>
     </owl:Class>
     
 
@@ -367,13 +316,7 @@
     <!-- http://purl.org/auto/l4_core#Traffic_Object -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Object">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#L4_Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf rdf:resource="http://purl.org/auto/act#Actor"/>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A traffic object is any object that dynamically performs a role in traffic, but is not an actor (e.g. a trailer).</rdfs:comment>
         <rdfs:label xml:lang="de">Verkehrsobjekt</rdfs:label>
     </owl:Class>
@@ -384,38 +327,8 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Participant">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Subject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/act#has_intent"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/auto/act#Intent"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An actor with that pursues some goals related to the traffic system.</rdfs:comment>
         <rdfs:label xml:lang="de">Verkehrsteilnehmer</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_core#Traffic_Process -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Process">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/act#Activity"/>
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#L4_Entity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/act#changes_continuous_state_of"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Object"/>
-                            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Subject"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A traffic process is an activity that changes the continuous state of some traffic subject or object.</rdfs:comment>
-        <rdfs:label xml:lang="de">Verkehrsprozess</rdfs:label>
     </owl:Class>
     
 
@@ -423,7 +336,6 @@
     <!-- http://purl.org/auto/l4_core#Traffic_Subject -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Subject">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/act#Actor"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#L4_Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Dynamical_Object"/>
         <rdfs:comment xml:lang="en">A subject is an actor within a traffic system.</rdfs:comment>
@@ -438,22 +350,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <rdfs:comment xml:lang="en">An unpowered vehicle that is designed to be towed by some powered vehicle.</rdfs:comment>
         <rdfs:label xml:lang="de">Anhänger</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_core#Trajectory -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_core#Trajectory">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Process"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
-                <owl:someValuesFrom rdf:resource="http://www.opengis.net/ont/gml#Curve"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A 4D representation of the path over time that a traffic subject or object takes during the process.</rdfs:comment>
-        <rdfs:label xml:lang="de">Trajektorie</rdfs:label>
     </owl:Class>
     
 
@@ -499,25 +395,6 @@
     <!-- http://purl.org/auto/physics#Dynamical_Object -->
 
     <owl:Class rdf:about="http://purl.org/auto/physics#Dynamical_Object"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Object"/>
-            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Process"/>
-            <rdf:Description rdf:about="http://purl.org/auto/l4_core#Traffic_Subject"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
 
 

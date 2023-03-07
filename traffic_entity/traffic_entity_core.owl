@@ -89,7 +89,7 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_entity_core#traffic_entity_data_property"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/traffic_entity_core#Traffic_Entity"/>
-        <rdfs:comment xml:lang="en">Can be used to uniquely identify an individual over time.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Can be used to uniquely identify an individual (esp. over time).</rdfs:comment>
         <rdfs:label xml:lang="de">bezeichner</rdfs:label>
     </owl:DatatypeProperty>
     

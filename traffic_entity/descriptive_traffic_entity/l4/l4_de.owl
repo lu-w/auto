@@ -119,14 +119,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_core#Traffic_Maneuver -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Maneuver">
-        <rdfs:comment xml:lang="en">From &apos;Fertigkeiten- und Fähigkeitengraphen als Grundlage des sicheren Betriebs von automatisierten Fahrzeugen im öffentlichen Straßenverkehr in städtischer Umgebung&apos;, A. C. Reschka, 2017.</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_core#Vehicle -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Vehicle"/>
@@ -306,33 +298,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Cross_Intersection -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cross_Intersection">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Kreuzung_Überfahren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Cut_In -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_In">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
-        <rdfs:label xml:lang="de">Einscheren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Cut_Out -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_Out">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
-        <rdfs:label xml:lang="de">Ausscheren</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Deer -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Deer">
@@ -356,15 +321,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Domestic_Animal">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Animal"/>
         <rdfs:label xml:lang="de">Haustier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Driving_Straight -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Driving_Straight">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Geradeausfahren</rdfs:label>
     </owl:Class>
     
 
@@ -401,15 +357,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Emergency_Vehicle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <rdfs:label xml:lang="de">Einsatzfahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Encroach -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Encroach">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Annähern</rdfs:label>
     </owl:Class>
     
 
@@ -487,24 +434,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Lane_Change -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Lane_Change">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Spurwechsel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Left_Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Left_Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Linksabbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Metall_Can -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Metall_Can">
@@ -532,15 +461,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Parking_Vehicle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <rdfs:label xml:lang="de">Parkendes_Fahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Pass -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Pass">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Vorbeifahren</rdfs:label>
     </owl:Class>
     
 
@@ -655,15 +575,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Right_Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Right_Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Rechtsabbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Road_Worker -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Road_Worker">
@@ -682,38 +593,11 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Safe_Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Safe_Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
-        <rdfs:label xml:lang="de">Sicheres_Anhalten</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#School_Bus -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#School_Bus">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
         <rdfs:label xml:lang="de">Schulbus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Start -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Start">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Anfahren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Anhalten</rdfs:label>
     </owl:Class>
     
 
@@ -732,15 +616,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Street_Cleaning_Truck">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Truck"/>
         <rdfs:label xml:lang="de">Abfallsammelfahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Strong_Braking_Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Strong_Braking_Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
-        <rdfs:label xml:lang="de">Anhalten_Mit_Starkem_Bremsmanöver</rdfs:label>
     </owl:Class>
     
 
@@ -827,24 +702,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Truck_Trailer">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
         <rdfs:label xml:lang="de">Sattelauflieger</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Abbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Turn_Around -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn_Around">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Umdrehen</rdfs:label>
     </owl:Class>
     
 

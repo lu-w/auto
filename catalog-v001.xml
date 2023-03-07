@@ -7,12 +7,9 @@
     <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/geosparql" uri="traffic_related/geosparql.rdf"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/" uri="automotive_urban_traffic_ontology.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/perception" uri="traffic_related/perception.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/auto/act" uri="traffic_related/act.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/policy" uri="traffic_related/policy.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/physics" uri="traffic_related/physics.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/communication" uri="traffic_related/communication.owl"/>
-    <uri id="Imports Wizard Entry" name="http://www.w3.org/2006/time" uri="traffic_related/time.owl"/>
-    <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_model" uri="traffic_model/traffic_model.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_core" uri="traffic_entity/traffic_entity_core.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_de" uri="traffic_entity/traffic_entity_de.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/descriptive_traffic_entity_core" uri="traffic_entity/descriptive_traffic_entity/descriptive_traffic_entity_core.owl"/>
@@ -31,4 +28,5 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/l5_core" uri="traffic_entity/descriptive_traffic_entity/l5/l5_core.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_de" uri="traffic_entity/descriptive_traffic_entity/l6/l6_de.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/l6_core" uri="traffic_entity/descriptive_traffic_entity/l6/l6_core.owl"/>
+    <uri id="Automatically generated entry, Timestamp=1636531909041" name="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl" uri="owlready_ontology.owl"/>
 </catalog>
