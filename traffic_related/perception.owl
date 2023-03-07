@@ -244,7 +244,6 @@
     <!-- http://purl.org/auto/perception#has_occlusion_rate -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_occlusion_rate">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/perception#Is_Occlusion"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>

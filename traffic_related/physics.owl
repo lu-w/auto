@@ -15,9 +15,12 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:physics="http://purl.org/auto/physics#">
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#">
     <owl:Ontology rdf:about="http://purl.org/auto/physics">
+        <owl:imports rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owlready_ontology:python_module>pyauto.extras.physics</owlready_ontology:python_module>
     </owl:Ontology>
     
 
@@ -897,7 +900,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
     <!-- http://purl.org/auto/physics#has_mass -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/auto/physics#has_mass">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <range>[0, \infty)</range>
         <unit>kg</unit>

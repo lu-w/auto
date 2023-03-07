@@ -122,7 +122,6 @@
     
 
 
-
     <!-- http://purl.org/auto/physical_property -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/physical_property">
@@ -438,6 +437,7 @@
     <rdf:Description rdf:about="http://purl.org/auto/traffic_entity_core#traffic_entity_property">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
     </rdf:Description>
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#ehContains -->
@@ -591,6 +591,7 @@
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin"/>
     
 
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -655,6 +656,14 @@
     
 
 
+    <!-- http://purl.org/auto/perception#has_occlusion_rate -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#has_occlusion_rate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/perception#has_visibility_distance -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_visibility_distance">
@@ -703,6 +712,14 @@
     
 
 
+    <!-- http://purl.org/auto/physics#has_mass -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_mass">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/physics#has_position_based_property -->
 
     <rdf:Description rdf:about="http://purl.org/auto/physics#has_position_based_property">
@@ -715,6 +732,14 @@
 
     <rdf:Description rdf:about="http://purl.org/auto/physics#has_temperature">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/policy#has_speed_limit -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/policy#has_speed_limit">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
     </rdf:Description>
     
 
@@ -772,7 +797,7 @@
     <owl:DatatypeProperty rdf:about="http://www.opengis.net/ont/geosparql#spatialDimension">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
     </owl:DatatypeProperty>
-   
+    
 
 
     <!-- 
@@ -782,6 +807,9 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    
+
 
     <!-- http://purl.org/auto/#Communication_Concept -->
 
@@ -835,6 +863,7 @@
         <rdfs:comment xml:lang="en">Contains concepts from domains that are related and relevant to the traffic ontology, but are semantically seperate. The traffic entity ontology references the included related domains to allow for an accurate representation. For example, physics is a concept that is relevant for traffic, but is not a concept exclusively occurring in traffic. Thus, physics is a traffic related concept and can be used by any traffic concept.</rdfs:comment>
         <rdfs:label xml:lang="de">Verkehrsverwandtes_Konzept</rdfs:label>
     </owl:Class>
+    
 
 
     <!-- http://purl.org/auto/communication#Channel -->
@@ -1026,7 +1055,7 @@
     <owl:Class rdf:about="http://purl.org/auto/policy#Rule">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Policy_Concept"/>
     </owl:Class>
-   
+    
 
 
     <!-- http://www.opengis.net/ont/geosparql#Feature -->
@@ -1042,9 +1071,6 @@
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
     </rdf:Description>
-    
-
-
 </rdf:RDF>
 
 
