@@ -85,12 +85,7 @@ Note that this can be an average or a rough estimation, i.e. depending on the ac
     <owl:AnnotationProperty rdf:about="http://purl.org/auto/physics#unit">
         <rdfs:comment xml:lang="en">Allows to annotate units on data properties.</rdfs:comment>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
-
-    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+   
     
 
 
