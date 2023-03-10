@@ -11,7 +11,8 @@
      xmlns:l2_de="http://purl.org/auto/l2_de#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:physics="http://purl.org/auto/physics#">
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#">
     <owl:Ontology rdf:about="http://purl.org/auto/l2_de">
         <owl:imports rdf:resource="http://purl.org/auto/l2_core"/>
     </owl:Ontology>
@@ -26,18 +27,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/auto/l1_de#Leitbake -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l1_de#Leitbake"/>
-    
-
-
-    <!-- http://purl.org/auto/l1_de#Leitpfosten -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l1_de#Leitpfosten"/>
     
 
 
@@ -400,17 +389,6 @@
     <!-- http://purl.org/auto/l2_de#Reflector_Post_Boundary_System -->
 
     <owl:Class rdf:about="http://purl.org/auto/l2_de#Reflector_Post_Boundary_System">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/auto/physics#System"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.org/auto/l1_de#Leitpfosten"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#System_Of_Guidance_Systems"/>
         <rdfs:label xml:lang="de">Leitpfostenleitsystem</rdfs:label>
     </owl:Class>
@@ -449,17 +427,6 @@
     <!-- http://purl.org/auto/l2_de#Safety_Beacon_Boundary_System -->
 
     <owl:Class rdf:about="http://purl.org/auto/l2_de#Safety_Beacon_Boundary_System">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/auto/physics#System"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.org/auto/l1_de#Leitbake"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_de#System_Of_Guidance_Systems"/>
         <rdfs:label xml:lang="de">Leitbakenleitsystem</rdfs:label>
     </owl:Class>
