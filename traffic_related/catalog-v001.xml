@@ -7,5 +7,7 @@
         <uri id="Automatically generated entry, Timestamp=1678207541744" name="http://purl.org/auto/policy" uri="policy.owl"/>
         <uri id="Automatically generated entry, Timestamp=1678207541744" name="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl" uri="owlready_ontology.rdf"/>
         <uri id="Automatically generated entry, Timestamp=1678207541744" name="http://www.opengis.net/ont/geosparql" uri="geosparql.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1678207541744" name="http://www.opengis.net/ont/gml" uri="gml.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1678207541744" name="http://www.opengis.net/ont/sf" uri="sf.rdf"/>
     </group>
 </catalog>

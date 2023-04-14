@@ -19,6 +19,7 @@
      xmlns:physics="http://purl.org/auto/physics#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:publication="http://purl.org/auto/#publication:"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
      xmlns:Automotive_Urban_Traffic_Ontology="http://purl.org/auto/#"
      xmlns:automotive_urban_traffic_ontology="http://purl.org/auto/automotive_urban_traffic_ontology/">
     <owl:Ontology rdf:about="http://purl.org/auto/">

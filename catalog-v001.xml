@@ -10,6 +10,8 @@
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/policy" uri="traffic_related/policy.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/physics" uri="traffic_related/physics.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/communication" uri="traffic_related/communication.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/gml" uri="traffic_related/gml.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.opengis.net/ont/sf" uri="traffic_related/sf.rdf"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_core" uri="traffic_entity/traffic_entity_core.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/traffic_entity_de" uri="traffic_entity/traffic_entity_de.owl"/>
     <uri id="Imports Wizard Entry" name="http://purl.org/auto/descriptive_traffic_entity_core" uri="traffic_entity/descriptive_traffic_entity/descriptive_traffic_entity_core.owl"/>
