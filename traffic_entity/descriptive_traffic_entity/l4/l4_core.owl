@@ -13,11 +13,14 @@
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:l4_core="http://purl.org/auto/l4_core#"
-     xmlns:physics="http://purl.org/auto/physics#">
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#">
     <owl:Ontology rdf:about="http://purl.org/auto/l4_core">
         <owl:imports rdf:resource="http://purl.org/auto/perception"/>
         <owl:imports rdf:resource="http://purl.org/auto/physics"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
+        <owlready_ontology:python_module>pyauto.extras.l4.pedestrian</owlready_ontology:python_module>
+        <owlready_ontology:python_module>pyauto.extras.l4.vehicle</owlready_ontology:python_module>
     </owl:Ontology>
     
 
@@ -250,6 +253,11 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
         <owl:disjointWith rdf:resource="http://purl.org/auto/l4_core#Partially_Motorized_Vehicle"/>
+        <physics:has_maximum_acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5</physics:has_maximum_acceleration>
+        <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-4.5</physics:has_maximum_deceleration>
+        <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</physics:has_maximum_jerk>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</physics:has_maximum_yaw_rate>
+        <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-1.5</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A vehicle that has a motor that can propel the vehicle forward. The vehicle shall also be designed to be driven (also temporarily) on roads.</rdfs:comment>
         <rdfs:label xml:lang="de">Motorisiertes_Fahrzeug</rdfs:label>
     </owl:Class>
@@ -297,6 +305,13 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_core#Pedestrian">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Human"/>
+        <physics:has_maximum_acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physics:has_maximum_acceleration>
+        <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</physics:has_maximum_deceleration>
+        <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physics:has_maximum_jerk>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</physics:has_maximum_speed>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate_change rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</physics:has_maximum_yaw_rate_change>
+        <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A human traffic participant that does not drive a vehicle.</rdfs:comment>
         <rdfs:label xml:lang="de">Zu_Fuß_Gehender</rdfs:label>
     </owl:Class>

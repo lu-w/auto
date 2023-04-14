@@ -11,7 +11,8 @@
      xmlns:l4_de="http://purl.org/auto/l4_de#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:physics="http://purl.org/auto/physics#">
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#">
     <owl:Ontology rdf:about="http://purl.org/auto/l4_de">
         <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
         <owl:imports rdf:resource="http://purl.org/auto/l1_de"/>
@@ -114,7 +115,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Vulnerable_Road_User"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</physics:has_maximum_speed>
     </rdf:Description>
     
 
@@ -166,9 +166,13 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Bicycle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</physics:has_maximum_speed>
-        <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
+        <physics:has_maximum_acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physics:has_maximum_acceleration>
+        <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-3</physics:has_maximum_deceleration>
+        <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</physics:has_maximum_jerk>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</physics:has_maximum_speed>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate_change rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</physics:has_maximum_yaw_rate_change>
+        <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.5</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A vehicle without a motor that has two wheels and is propelled by human labor.</rdfs:comment>
         <rdfs:label xml:lang="de">Fahrrad</rdfs:label>
     </owl:Class>
@@ -448,7 +452,7 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Motorcycle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Motorrad</rdfs:label>
@@ -486,9 +490,9 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Passenger_Car">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
-        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Personenkraftwagen</rdfs:label>
     </owl:Class>
     
@@ -689,7 +693,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Cargo_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Commercial_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Lastkraftwagen</rdfs:label>
