@@ -14,7 +14,7 @@ This taxonomy builds on the [work of Scholtes et al.](https://ieeexplore.ieee.or
 ### Traffic Related (`traffic_related`)
 
 The broad spectrum of urban road traffic covers many concepts that are related to traffic, but not a primary part of it (i.e. not categorizable in the 6-Layer Model): the so-called traffic related concepts. 
-They include (but are not limited to) perception, communication, policies, physics, and temporal aspects. 
+They include (but are not limited to) perception, communication, policies, and physics. 
 These concepts, which naturally interact with traffic, are used within the formalized 6-Layer Model.
 
 ### A.U.T.O.
