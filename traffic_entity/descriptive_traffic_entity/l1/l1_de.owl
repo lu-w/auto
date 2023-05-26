@@ -162,6 +162,23 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_core#Light_Sign -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/l1_core#Light_Sign">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.org/auto/communication#delivers_signal"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/communication#Signal"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/l1_core#Road_Material -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Material"/>
@@ -314,6 +331,15 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Arial_Road_Marker"/>
         <rdfs:comment xml:lang="de">StVO 299</rdfs:comment>
         <rdfs:label xml:lang="de">Grenzmarkierung_Für_Halt_Oder_Parkverbote</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Broken_Light_Sign -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Broken_Light_Sign">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Light_Sign"/>
+        <rdfs:label xml:lang="de">Kaputtes_Lichtzeichen</rdfs:label>
     </owl:Class>
     
 
