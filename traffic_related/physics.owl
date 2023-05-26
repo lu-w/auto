@@ -474,52 +474,10 @@ In our context, it is defined as a distance of less than 4 meters between both s
     
 
 
-    <!-- http://purl.org/auto/physics#performance_spatial_relation -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#performance_spatial_relation">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_spatial_relation"/>
-        <rdfs:comment xml:lang="en">Needed for performance reasoners to allow the reasoner to distinguish certain spatial relations used in SWRL rules.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/physics#sfIntersects_crosswalk_bicyclist -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_crosswalk_bicyclist">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/physics#sfIntersects_crosswalk_lane -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_crosswalk_lane">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/physics#sfIntersects_lane_driver -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_lane_driver">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/physics#sfIntersects_nonlane_bicyclist -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#sfIntersects_nonlane_bicyclist">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#performance_spatial_relation"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.opengis.net/ont/geosparql#ehContains -->
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehContains">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#EH_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -617,7 +575,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8eq">
         <owl:equivalentProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfEquals"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntpp"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
@@ -632,7 +589,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntpp">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
         <owl:inverseOf rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8ntppi"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
@@ -645,7 +601,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#rcc8ntppi">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#RCC8_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8po"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tpp"/>
         <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#rcc8tppi"/>
@@ -685,7 +640,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfContains">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -710,7 +664,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfEquals">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -743,7 +696,6 @@ In our context, it is defined as a distance of less than 4 meters between both s
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#sfWithin">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#SF_spatial_relation"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1401,7 +1353,7 @@ In our context, it is defined as a distance of less than 4 meters between both s
                     <rdf:Description rdf:about="http://purl.org/auto/physics#Dynamical_Object"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/auto/physics#has_speed"/>
-                        <owl:someValuesFrom>
+                        <owl:allValuesFrom>
                             <rdfs:Datatype>
                                 <owl:oneOf>
                                     <rdf:Description>
@@ -1411,7 +1363,7 @@ In our context, it is defined as a distance of less than 4 meters between both s
                                     </rdf:Description>
                                 </owl:oneOf>
                             </rdfs:Datatype>
-                        </owl:someValuesFrom>
+                        </owl:allValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
