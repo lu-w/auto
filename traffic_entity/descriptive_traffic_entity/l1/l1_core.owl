@@ -16,7 +16,6 @@
     <owl:Ontology rdf:about="http://purl.org/auto/l1_core">
         <owl:imports rdf:resource="http://purl.org/auto/l6_core"/>
         <owl:imports rdf:resource="http://purl.org/auto/physics"/>
-        <owlready_ontology:python_module>pyauto.extras.l1.lane</owlready_ontology:python_module>
         <owlready_ontology:python_module>pyauto.extras.l1.road</owlready_ontology:python_module>
     </owl:Ontology>
     
