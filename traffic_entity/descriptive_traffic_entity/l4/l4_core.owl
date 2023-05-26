@@ -309,7 +309,7 @@
         <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</physics:has_maximum_deceleration>
         <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physics:has_maximum_jerk>
         <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.1</physics:has_maximum_speed>
-        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</physics:has_maximum_yaw_rate>
         <physics:has_maximum_yaw_rate_change rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</physics:has_maximum_yaw_rate_change>
         <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-1</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A human traffic participant that does not drive a vehicle.</rdfs:comment>
