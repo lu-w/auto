@@ -71,6 +71,15 @@
     
 
 
+    <!-- http://purl.org/auto/l1_de#is_lane_right_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_de#is_lane_right_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_right_of"/>
+        <rdfs:label xml:lang="de">ist_streifen_rechts_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
