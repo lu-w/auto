@@ -71,6 +71,24 @@
     
 
 
+    <!-- http://purl.org/auto/l1_de#is_lane_left_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_de#is_lane_left_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_left_of"/>
+        <rdfs:label xml:lang="de">ist_streifen_rechts_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#is_lane_parallel_to -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_de#is_lane_parallel_to">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#has_positional_relation"/>
+        <rdfs:label xml:lang="de">ist_streifen_parallel_zu</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/auto/l1_de#is_lane_right_of -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/l1_de#is_lane_right_of">
