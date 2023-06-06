@@ -474,6 +474,17 @@ In our context, it is defined as a distance of less than 4 meters between both s
     
 
 
+    <!-- http://purl.org/auto/physics#is_to_the_side_of -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/physics#is_to_the_side_of">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_properly_left_of"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/physics#is_properly_right_of"/>
+        <rdfs:comment xml:lang="en">A spatial object is to the side of another spatial object if it is properly left or properly right of that object.</rdfs:comment>
+        <rdfs:label xml:lang="de">ist_seitlich_von</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.opengis.net/ont/geosparql#ehContains -->
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehContains">
