@@ -30,6 +30,18 @@
     
 
 
+    <!-- http://purl.org/auto/l1_de#Parking_Lane -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Parking_Lane"/>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Walkway -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Walkway"/>
+    
+
+
     <!-- http://purl.org/auto/l2_core#Guidance_System -->
 
     <owl:Class rdf:about="http://purl.org/auto/l2_core#Guidance_System"/>
@@ -276,6 +288,24 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#Roadside_Construction"/>
         <rdfs:comment xml:lang="en">A parking space on the side of the road. Needs to be distinguished from parking spots on the road.</rdfs:comment>
         <rdfs:label xml:lang="de">Parkfläche</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l2_de#Parking_Spot -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l2_de#Parking_Spot">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_de#Parking_Lane"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_de#Walkway"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l2_de#Parking_Space"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l2_core#L2_Entity"/>
+        <rdfs:label xml:lang="de">Parkmöglichkeit</rdfs:label>
     </owl:Class>
     
 

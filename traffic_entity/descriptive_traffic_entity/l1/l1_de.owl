@@ -1690,6 +1690,22 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#2_Lane_Road -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#2_Lane_Road">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/auto/l1_core#has_lane"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://purl.org/auto/l1_core#Driveable_Lane"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road"/>
+        <rdfs:label xml:lang="de">Zweistreifige_Straße</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

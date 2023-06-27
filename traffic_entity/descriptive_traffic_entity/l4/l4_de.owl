@@ -797,14 +797,7 @@
                     <rdf:Description rdf:about="http://purl.org/auto/physics#Non_Moving_Dynamical_Object"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.org/auto/l1_de#Parking_Lane"/>
-                                    <rdf:Description rdf:about="http://purl.org/auto/l2_de#Parking_Space"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l2_de#Parking_Spot"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
