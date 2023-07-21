@@ -21,7 +21,6 @@
         <owl:imports rdf:resource="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <owlready_ontology:python_module>pyauto.extras.physics.dynamical_object</owlready_ontology:python_module>
-        <owlready_ontology:python_module>pyauto.extras.physics.moving_dynamical_object</owlready_ontology:python_module>
         <owlready_ontology:python_module>pyauto.extras.physics.spatial_object</owlready_ontology:python_module>
     </owl:Ontology>
     
