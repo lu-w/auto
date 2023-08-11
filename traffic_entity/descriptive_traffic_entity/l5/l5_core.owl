@@ -16,7 +16,6 @@
      xmlns:l5_core="http://purl.org/auto/l5_core#"
      xmlns:physics="http://purl.org/auto/physics#">
     <owl:Ontology rdf:about="http://purl.org/auto/l5_core">
-        <owl:imports rdf:resource="http://purl.org/auto/act"/>
         <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
         <owl:imports rdf:resource="http://purl.org/auto/physics"/>
     </owl:Ontology>
@@ -359,7 +358,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l5_core#Environment">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#System"/>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/auto/physics#consists_of"/>
@@ -404,17 +402,6 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l5_core#Environmental_Event">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l5_core#L5_Entity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/auto/act#Event"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.org/auto/act#changes_discrete_state_of"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l5_core#Environmental_Object"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="de">An environmental event is an event that changes the discrete state of some environmental object. Note that it can also change the state of other entities.</rdfs:comment>
         <rdfs:label xml:lang="de">Umweltereignis</rdfs:label>
     </owl:Class>

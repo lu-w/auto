@@ -11,7 +11,8 @@
      xmlns:l4_de="http://purl.org/auto/l4_de#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:physics="http://purl.org/auto/physics#">
+     xmlns:physics="http://purl.org/auto/physics#"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#">
     <owl:Ontology rdf:about="http://purl.org/auto/l4_de">
         <owl:imports rdf:resource="http://purl.org/auto/l1_core"/>
         <owl:imports rdf:resource="http://purl.org/auto/l1_de"/>
@@ -114,16 +115,7 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Vulnerable_Road_User"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9</physics:has_maximum_speed>
     </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/l4_core#Traffic_Maneuver -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_core#Traffic_Maneuver">
-        <rdfs:comment xml:lang="en">From &apos;Fertigkeiten- und Fähigkeitengraphen als Grundlage des sicheren Betriebs von automatisierten Fahrzeugen im öffentlichen Straßenverkehr in städtischer Umgebung&apos;, A. C. Reschka, 2017.</rdfs:comment>
-    </owl:Class>
     
 
 
@@ -174,9 +166,13 @@
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Bicycle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Non_Motorized_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</physics:has_maximum_speed>
-        <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
-        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_acceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physics:has_maximum_acceleration>
+        <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-4.5</physics:has_maximum_deceleration>
+        <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</physics:has_maximum_jerk>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</physics:has_maximum_speed>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate_change rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</physics:has_maximum_yaw_rate_change>
+        <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.5</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A vehicle without a motor that has two wheels and is propelled by human labor.</rdfs:comment>
         <rdfs:label xml:lang="de">Fahrrad</rdfs:label>
     </owl:Class>
@@ -306,33 +302,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Cross_Intersection -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cross_Intersection">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Kreuzung_Überfahren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Cut_In -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_In">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
-        <rdfs:label xml:lang="de">Einscheren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Cut_Out -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Cut_Out">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Lane_Change"/>
-        <rdfs:label xml:lang="de">Ausscheren</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Deer -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Deer">
@@ -356,15 +325,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Domestic_Animal">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Animal"/>
         <rdfs:label xml:lang="de">Haustier</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Driving_Straight -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Driving_Straight">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Geradeausfahren</rdfs:label>
     </owl:Class>
     
 
@@ -401,15 +361,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Emergency_Vehicle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <rdfs:label xml:lang="de">Einsatzfahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Encroach -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Encroach">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Annähern</rdfs:label>
     </owl:Class>
     
 
@@ -487,24 +438,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Lane_Change -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Lane_Change">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Spurwechsel</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Left_Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Left_Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Linksabbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Metall_Can -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Metall_Can">
@@ -519,7 +452,7 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Motorcycle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Motorrad</rdfs:label>
@@ -532,15 +465,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Parking_Vehicle">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Vehicle"/>
         <rdfs:label xml:lang="de">Parkendes_Fahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Pass -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Pass">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Vorbeifahren</rdfs:label>
     </owl:Class>
     
 
@@ -566,9 +490,9 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Passenger_Car">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Passenger_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</physics:has_maximum_yaw>
-        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Personenkraftwagen</rdfs:label>
     </owl:Class>
     
@@ -655,15 +579,6 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Right_Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Right_Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Rechtsabbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#Road_Worker -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Road_Worker">
@@ -682,38 +597,11 @@
     
 
 
-    <!-- http://purl.org/auto/l4_de#Safe_Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Safe_Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
-        <rdfs:label xml:lang="de">Sicheres_Anhalten</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l4_de#School_Bus -->
 
     <owl:Class rdf:about="http://purl.org/auto/l4_de#School_Bus">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Bus"/>
         <rdfs:label xml:lang="de">Schulbus</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Start -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Start">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Anfahren</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Anhalten</rdfs:label>
     </owl:Class>
     
 
@@ -732,15 +620,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Street_Cleaning_Truck">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Truck"/>
         <rdfs:label xml:lang="de">Abfallsammelfahrzeug</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Strong_Braking_Stop -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Strong_Braking_Stop">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Stop"/>
-        <rdfs:label xml:lang="de">Anhalten_Mit_Starkem_Bremsmanöver</rdfs:label>
     </owl:Class>
     
 
@@ -814,7 +693,7 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Cargo_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Motorized_Road_Vehicle"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Commercial_Vehicle"/>
-        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80</physics:has_maximum_speed>
+        <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23</physics:has_maximum_speed>
         <physics:has_maximum_yaw rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</physics:has_maximum_yaw>
         <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25</physics:has_maximum_yaw_rate>
         <rdfs:label xml:lang="de">Lastkraftwagen</rdfs:label>
@@ -827,24 +706,6 @@
     <owl:Class rdf:about="http://purl.org/auto/l4_de#Truck_Trailer">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Trailer"/>
         <rdfs:label xml:lang="de">Sattelauflieger</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Turn -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_core#Traffic_Maneuver"/>
-        <rdfs:label xml:lang="de">Abbiegen</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/l4_de#Turn_Around -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l4_de#Turn_Around">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l4_de#Turn"/>
-        <rdfs:label xml:lang="de">Umdrehen</rdfs:label>
     </owl:Class>
     
 
@@ -936,14 +797,7 @@
                     <rdf:Description rdf:about="http://purl.org/auto/physics#Non_Moving_Dynamical_Object"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://purl.org/auto/l1_de#Parking_Lane"/>
-                                    <rdf:Description rdf:about="http://purl.org/auto/l2_de#Parking_Space"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l2_de#Parking_Spot"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>

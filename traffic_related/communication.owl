@@ -25,7 +25,6 @@
     <!-- http://purl.org/auto/communication#delivered_from -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/communication#delivered_from">
-        <owl:inverseOf rdf:resource="http://purl.org/auto/communication#delivers_signal"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/communication#Signal"/>
         <rdfs:range rdf:resource="http://purl.org/auto/communication#Sender"/>
         <rdfs:label xml:lang="de">abgegeben_von</rdfs:label>

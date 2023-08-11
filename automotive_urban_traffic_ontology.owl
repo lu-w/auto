@@ -13,23 +13,21 @@
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:time="http://www.w3.org/2006/time#"
      xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:physics="http://purl.org/auto/physics#"
      xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
      xmlns:publication="http://purl.org/auto/#publication:"
+     xmlns:owlready_ontology="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
      xmlns:Automotive_Urban_Traffic_Ontology="http://purl.org/auto/#"
      xmlns:automotive_urban_traffic_ontology="http://purl.org/auto/automotive_urban_traffic_ontology/">
     <owl:Ontology rdf:about="http://purl.org/auto/">
-        <owl:imports rdf:resource="http://purl.org/auto/act"/>
         <owl:imports rdf:resource="http://purl.org/auto/communication"/>
         <owl:imports rdf:resource="http://purl.org/auto/perception"/>
         <owl:imports rdf:resource="http://purl.org/auto/physics"/>
         <owl:imports rdf:resource="http://purl.org/auto/policy"/>
         <owl:imports rdf:resource="http://purl.org/auto/traffic_entity_de"/>
-        <owl:imports rdf:resource="http://purl.org/auto/traffic_model"/>
         <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql"/>
         <rdfs:comment xml:lang="en">This is the Automotive Urban Traffic Ontology. Its competency lies in the description of urban traffic happenings and their entities and relations.</rdfs:comment>
         <rdfs:label xml:lang="de">Automobile_Urbane_Verkehrsontologie</rdfs:label>
@@ -125,29 +123,11 @@
     
 
 
-    <!-- http://purl.org/auto/activity_property -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/activity_property">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
-        <rdfs:label xml:lang="de">aktivitätsbezogene_eigenschaft</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.org/auto/physical_property -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/physical_property">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_concept_property"/>
         <rdfs:label xml:lang="de">physikalische_eigenschaft</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/traffic_modeling_property -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_modeling_property">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
-        <rdfs:label xml:lang="de">verkehrsmodellierungs_eigenschaft</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -194,70 +174,6 @@
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#automotive_urban_traffic_property"/>
         <rdfs:label xml:lang="de">verkehrsverwandtes_konzept_eigenschaft</rdfs:label>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/auto/act#changes_state_of -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#changes_state_of">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#conducted_by -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#conducted_by">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#conducts -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#conducts">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#has_intent -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#has_intent">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#has_participant -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#has_participant">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#induced_by_event -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#induced_by_event">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#leads_to_activity -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#leads_to_activity">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/act#participates_in -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/act#participates_in">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
     
 
 
@@ -525,36 +441,6 @@
     
 
 
-    <!-- http://purl.org/auto/traffic_model#has_activity_set -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/traffic_model#has_activity_set">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/activity_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/traffic_model#has_traffic_entity -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_model#has_traffic_entity"/>
-    
-
-
-    <!-- http://purl.org/auto/traffic_model#traffic_model_element_property -->
-
-    <rdf:Description rdf:about="http://purl.org/auto/traffic_model#traffic_model_element_property">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_modeling_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://purl.org/auto/traffic_model#traffic_model_property -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/auto/traffic_model#traffic_model_property">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/traffic_modeling_property"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.opengis.net/ont/geosparql#ehContains -->
 
     <owl:ObjectProperty rdf:about="http://www.opengis.net/ont/geosparql#ehContains"/>
@@ -707,182 +593,6 @@
     
 
 
-    <!-- http://www.w3.org/2006/time#after -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#after">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#before -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#before">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#dayOfWeek -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#dayOfWeek">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasDateTimeDescription -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasDateTimeDescription">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasTRS -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTRS">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasTemporalDuration -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTemporalDuration">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasTime -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inTemporalPosition -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inTemporalPosition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inside -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inside">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalContains -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalContains">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalDisjoint -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalDisjoint">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalEquals -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalEquals">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalFinishedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalFinishedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalIn -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalIn">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalMeets -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalMeets">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalMetBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalMetBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalOverlappedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalOverlappedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalOverlaps -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalOverlaps">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#intervalStartedBy -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#intervalStartedBy">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#monthOfYear -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#monthOfYear">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#timeZone -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#timeZone">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/2006/time#unitType -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#unitType">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_property"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -947,6 +657,14 @@
     
 
 
+    <!-- http://purl.org/auto/perception#has_occlusion_rate -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/perception#has_occlusion_rate">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/perception#has_visibility_distance -->
 
     <owl:DatatypeProperty rdf:about="http://purl.org/auto/perception#has_visibility_distance">
@@ -995,6 +713,14 @@
     
 
 
+    <!-- http://purl.org/auto/physics#has_mass -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/physics#has_mass">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/auto/physics#has_position_based_property -->
 
     <rdf:Description rdf:about="http://purl.org/auto/physics#has_position_based_property">
@@ -1007,6 +733,14 @@
 
     <rdf:Description rdf:about="http://purl.org/auto/physics#has_temperature">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#physical_data_property"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/auto/policy#has_speed_limit -->
+
+    <rdf:Description rdf:about="http://purl.org/auto/policy#has_speed_limit">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#traffic_related_data_property"/>
     </rdf:Description>
     
 
@@ -1067,206 +801,6 @@
     
 
 
-    <!-- http://www.w3.org/2006/time#day -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#day">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#dayOfYear -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#dayOfYear">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#days -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#days">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hasXSDDuration -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#hasXSDDuration">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hour -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#hour">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#hours -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#hours">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inXSDDate -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDate">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inXSDDateTime -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTime">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inXSDDateTimeStamp -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDDateTimeStamp">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inXSDgYear -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDgYear">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#inXSDgYearMonth -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#inXSDgYearMonth">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#minute -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#minute">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#minutes -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#minutes">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#month -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#month">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#months -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#months">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#nominalPosition -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#nominalPosition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#numericDuration -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#numericDuration">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#numericPosition -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#numericPosition">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#second -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#second">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#seconds -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#seconds">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#week -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#week">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#weeks -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#weeks">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#xsdDateTime -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#xsdDateTime">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#year -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#year">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#years -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2006/time#years">
-        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/#temporal_data_property"/>
-    </rdf:Description>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1275,15 +809,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/auto/#Act_Concept -->
-
-    <owl:Class rdf:about="http://purl.org/auto/#Act_Concept">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Traffic_Related_Concept"/>
-        <rdfs:label xml:lang="de">Handlungskonzept</rdfs:label>
-    </owl:Class>
     
 
 
@@ -1336,16 +861,8 @@
 
     <owl:Class rdf:about="http://purl.org/auto/#Traffic_Related_Concept">
         <rdfs:comment xml:lang="en">All the related concepts can be employed be the core classes of A.U.T.O.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Contains concepts from domains that are related and relevant to the traffic ontology, but are semantically seperate. The traffic entity ontology references the included related domains to allow for an accurate representation. For example, time is a concept that is relevant for traffic, but is not a concept exclusively occurring in traffic. Thus, time is a traffic related concept and can be used by any traffic concept.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Contains concepts from domains that are related and relevant to the traffic ontology, but are semantically seperate. The traffic entity ontology references the included related domains to allow for an accurate representation. For example, physics is a concept that is relevant for traffic, but is not a concept exclusively occurring in traffic. Thus, physics is a traffic related concept and can be used by any traffic concept.</rdfs:comment>
         <rdfs:label xml:lang="de">Verkehrsverwandtes_Konzept</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/act#Intent -->
-
-    <owl:Class rdf:about="http://purl.org/auto/act#Intent">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Act_Concept"/>
     </owl:Class>
     
 
@@ -1542,54 +1059,6 @@
     
 
 
-    <!-- http://purl.org/auto/traffic_model#Scenario -->
-
-    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scenario">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/traffic_model#Scene -->
-
-    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scene">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.org/auto/descriptive_traffic_entity_core#Descriptive_Traffic_Entity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.org/auto/traffic_model#Scenery -->
-
-    <owl:Class rdf:about="http://purl.org/auto/traffic_model#Scenery">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.org/auto/traffic_model#has_traffic_entity"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
-                            <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_Entity"/>
-                            <rdf:Description rdf:about="http://purl.org/auto/l3_core#L3_Entity"/>
-                            <rdf:Description rdf:about="http://purl.org/auto/l5_core#L5_Entity"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- http://www.opengis.net/ont/geosparql#Feature -->
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#Feature">
@@ -1602,57 +1071,6 @@
 
     <rdf:Description rdf:about="http://www.opengis.net/ont/geosparql#SpatialObject">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Physical_Concept"/>
-    </rdf:Description>
-    
-
-
-    <!-- http://www.w3.org/2006/time#DayOfWeek -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#DayOfWeek">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TRS -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TRS">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TemporalDuration -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalDuration">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TemporalEntity -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TemporalPosition -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalPosition">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/2006/time#TimeZone -->
-
-    <owl:Class rdf:about="http://www.w3.org/2006/time#TimeZone">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/#Temporal_Concept"/>
-    </owl:Class>
-    <rdf:Description>
-        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
     </rdf:Description>
 </rdf:RDF>
 
