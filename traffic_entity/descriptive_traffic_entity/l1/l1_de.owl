@@ -218,11 +218,56 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Absolutes_Haltverbot -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Absolutes_Haltverbot">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 283</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Absolutes_Haltverbot_Anfang_Aufstellung_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Absolutes_Haltverbot_Anfang_Aufstellung_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 283-10</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Absolutes_Haltverbot_Ende_Aufstellung_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Absolutes_Haltverbot_Ende_Aufstellung_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 283-20</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Absolutes_Haltverbot_Mitte_Aufstellung_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Absolutes_Haltverbot_Mitte_Aufstellung_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 283-30</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Acceleration_Lane -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Acceleration_Lane">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Driveable_Lane"/>
         <rdfs:label xml:lang="de">Einfädelungsstreifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Anlieger_frei -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Anlieger_frei">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Additional_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 1020-30</rdfs:comment>
     </owl:Class>
     
 
@@ -272,6 +317,33 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Banquette">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Cross_Section_Element"/>
         <rdfs:label xml:lang="de">Bankett</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Beginn_einer_Tempo_30_Zone -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Beginn_einer_Tempo_30_Zone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 274.1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Beginn_eines_eingeschränkten_Haltverbotes_für_eine_Zone -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Beginn_eines_eingeschränkten_Haltverbotes_für_eine_Zone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 290.1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Beginn_eines_verkehrsberuhigten_Bereichs -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Beginn_eines_verkehrsberuhigten_Bereichs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 325.1</rdfs:comment>
     </owl:Class>
     
 
@@ -621,6 +693,15 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Eingeschränktes_Haltverbot -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Eingeschränktes_Haltverbot">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 286</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Embankment -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Embankment">
@@ -635,6 +716,33 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Emergency_Bay">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Bay"/>
         <rdfs:label xml:lang="de">Nothaltebucht</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Ende_einer_Fahrradstraße -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Ende_einer_Fahrradstraße">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 244.2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Ende_eines_eingeschränkten_Haltverbotes_für_eine_Zone -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Ende_eines_eingeschränkten_Haltverbotes_für_eine_Zone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 290.2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Ende_eines_verkehrsberuhigten_Bereichs -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Ende_eines_verkehrsberuhigten_Bereichs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 325.2</rdfs:comment>
     </owl:Class>
     
 
@@ -658,6 +766,35 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Fußgängerüberweg_Aufstellung_links -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Fußgängerüberweg_Aufstellung_links">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Warning_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 101-21</rdfs:comment>
+        <rdfs:comment xml:lang="de">StVO 350-20</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Fußgängerüberweg_Aufstellung_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Fußgängerüberweg_Aufstellung_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Warning_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 101-11</rdfs:comment>
+        <rdfs:comment xml:lang="de">StVO 350-10</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Gehweg -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Gehweg">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 239</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Grating -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Grating">
@@ -673,6 +810,24 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Gravel">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Unpaved_Material"/>
         <rdfs:label xml:lang="de">Schotter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Halt_Vorfahrt_gewähren -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Halt_Vorfahrt_gewähren">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 206</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Haltestelle -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Haltestelle">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 224</rdfs:comment>
     </owl:Class>
     
 
@@ -767,6 +922,15 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Kreuzung_oder_Einmündung -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Kreuzung_oder_Einmündung">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Warning_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 102</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Lane_Boundary_Marker -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Lane_Boundary_Marker">
@@ -804,6 +968,15 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Directional_Traffic_Lights"/>
         <rdfs:comment xml:lang="en">Traffic light regulating turning left activities. Often indicated by a left arrow.</rdfs:comment>
         <rdfs:label xml:lang="de">Links_Lichtsignalanlage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Leitplatte_750_x_500 -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Leitplatte_750_x_500">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Equipment_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 626-30</rdfs:comment>
     </owl:Class>
     
 
@@ -884,6 +1057,42 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Mit_Parkschein -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Mit_Parkschein">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Additional_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 1053-31</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Parken -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Parken">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 314</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Parken_auf_Gehwegen_halb_in_Fahrtrichtung_rechts_Anfang -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Parken_auf_Gehwegen_halb_in_Fahrtrichtung_rechts_Anfang">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 315-56</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Parken_auf_Gehwegen_halb_in_Fahrtrichtung_rechts_Mitte -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Parken_auf_Gehwegen_halb_in_Fahrtrichtung_rechts_Mitte">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 315-58</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Parking_Lane -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Parking_Lane">
@@ -952,12 +1161,39 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Pfeilwegweiser_zur_Autobahn_rechtsweisend -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Pfeilwegweiser_zur_Autobahn_rechtsweisend">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 430-20</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Pothole -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Pothole">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
         <rdfs:comment xml:lang="en">Any type of crack or hole in the upper surface of the road.</rdfs:comment>
         <rdfs:label xml:lang="de">Schlagloch</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Radfahrer_frei -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Radfahrer_frei">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Additional_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 1022-10</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Radverkehr_kreuzt_von_links_und_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Radverkehr_kreuzt_von_links_und_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Additional_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 1000-32</rdfs:comment>
     </owl:Class>
     
 
@@ -1431,6 +1667,33 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Sackgasse -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Sackgasse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 357</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Sackgasse_für_Fußgänger_durchlässige_Sackgasse -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Sackgasse_für_Fußgänger_durchlässige_Sackgasse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 357-51</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Sackgasse_für_Radverkehr_und_Fußgänger_durchlässige_Sackgasse -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Sackgasse_für_Radverkehr_und_Fußgänger_durchlässige_Sackgasse">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 357-50</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Shark_Tooth_Marker -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Shark_Tooth_Marker">
@@ -1624,6 +1887,114 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
+    <!-- http://purl.org/auto/l1_de#Verbot_der_Einfahrt -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Verbot_der_Einfahrt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 267</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Verbot_für_Fahrzeuge_aller_Art -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Verbot_für_Fahrzeuge_aller_Art">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 250</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Verbot_für_Radverkehr -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Verbot_für_Radverkehr">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 254</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorfahrt -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorfahrt">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 301</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorfahrt_gewähren -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorfahrt_gewähren">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 205</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorfahrtstraße -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorfahrtstraße">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Guidance_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 306</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_geradeaus -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_geradeaus">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 209-30</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_geradeaus_oder_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_geradeaus_oder_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 214</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_links -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_links">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 209-10</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_rechts -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Fahrtrichtung_rechts">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 209</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Vorbeifahrt_links_vorbei -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Vorbeifahrt_links_vorbei">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 222_10</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Vorgeschriebene_Vorbeifahrt_rechts_vorbei -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Vorgeschriebene_Vorbeifahrt_rechts_vorbei">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 222</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/auto/l1_de#Wait_Line -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Wait_Line">
@@ -1662,16 +2033,6 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
-    <!-- http://purl.org/auto/l1_de#Wather_Dependent_Sign_Post -->
-
-    <owl:Class rdf:about="http://purl.org/auto/l1_de#Wather_Dependent_Sign_Post">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
-        <rdfs:comment xml:lang="en">A sign whose applicability depends on the weather.</rdfs:comment>
-        <rdfs:label xml:lang="de">Wetterabhängiges_Verkehrsschild</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.org/auto/l1_de#Way -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Way">
@@ -1686,6 +2047,34 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Way_Lane">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Lane"/>
         <rdfs:label xml:lang="de">Wegstreifen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Weather_Dependent_Sign_Post -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Weather_Dependent_Sign_Post">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Traffic_Post"/>
+        <rdfs:comment xml:lang="en">A sign whose applicability depends on the weather.</rdfs:comment>
+        <rdfs:label xml:lang="de">Wetterabhängiges_Verkehrsschild</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Zulässige_Höchstgeschwindigkeit_30_km_h -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Zulässige_Höchstgeschwindigkeit_30_km_h">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 274-30</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/auto/l1_de#Zulässige_Höchstgeschwindigkeit_50_km_h -->
+
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Zulässige_Höchstgeschwindigkeit_50_km_h">
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Regulatory_Sign"/>
+        <rdfs:comment xml:lang="de">StVO 274-50</rdfs:comment>
     </owl:Class>
     
 
