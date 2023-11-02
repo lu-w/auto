@@ -71,6 +71,15 @@
     
 
 
+    <!-- http://purl.org/auto/l4_core#has_small_distance -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/auto/l4_core#has_small_distance">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l4_core#L4_property"/>
+        <rdfs:label xml:lang="de">hat_kleine_distanz</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/auto/l4_core#is_transported -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/auto/l4_core#is_transported">
