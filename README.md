@@ -1,3 +1,7 @@
+<div align="center">
+<img src="./images/auto_icon.png" alt="A.U.T.O. Icon" width="200"/>
+</div>
+
 # The Automotive Urban Traffic Ontology
 
 This is the Automotive Urban Traffic Ontology (A.U.T.O.). 
