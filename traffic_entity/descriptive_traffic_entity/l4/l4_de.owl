@@ -795,10 +795,18 @@
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.org/auto/physics#Non_Moving_Dynamical_Object"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l2_de#Parking_Spot"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfCrosses"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l2_de#Curb"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfIntersects"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.org/auto/l2_de#Parking_Spot"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:intersectionOf>
