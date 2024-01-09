@@ -170,7 +170,7 @@
         <physics:has_maximum_deceleration rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-4.5</physics:has_maximum_deceleration>
         <physics:has_maximum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</physics:has_maximum_jerk>
         <physics:has_maximum_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</physics:has_maximum_speed>
-        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75</physics:has_maximum_yaw_rate>
+        <physics:has_maximum_yaw_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90</physics:has_maximum_yaw_rate>
         <physics:has_maximum_yaw_rate_change rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</physics:has_maximum_yaw_rate_change>
         <physics:has_minimum_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-0.5</physics:has_minimum_jerk>
         <rdfs:comment xml:lang="en">A vehicle without a motor that has two wheels and is propelled by human labor.</rdfs:comment>

@@ -133,7 +133,7 @@
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
+                    <rdf:Description rdf:about="http://purl.org/auto/l1_core#L1_Entity"/>
                     <rdf:Description rdf:about="http://purl.org/auto/l2_core#L2_Entity"/>
                 </owl:unionOf>
             </owl:Class>

@@ -334,9 +334,11 @@
     
 
 
-    <!-- http://purl.org/auto/l1_core#L1_Entität -->
+    <!-- http://purl.org/auto/l1_core#L1_Entity -->
 
-    <owl:Class rdf:about="http://purl.org/auto/l1_core#L1_Entität"/>
+    <owl:Class rdf:about="http://purl.org/auto/l1_core#L1_Entity">
+        <rdfs:label xml:lang="de">L1_Entität</rdfs:label>
+    </owl:Class>
     
 
 
@@ -474,7 +476,7 @@
     <!-- http://purl.org/auto/l1_core#Road_Element -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Element">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entity"/>
         <rdfs:comment xml:lang="en">Elements that in total can make up a complete road.</rdfs:comment>
         <rdfs:label xml:lang="de">Straßenelement</rdfs:label>
     </owl:Class>
@@ -519,7 +521,7 @@
     <!-- http://purl.org/auto/l1_core#Road_Network -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Network">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#System"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -544,7 +546,7 @@
     <!-- http://purl.org/auto/l1_core#Road_Network_Element -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_core#Road_Network_Element">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#L1_Entity"/>
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/physics#Spatial_Object"/>
         <rdfs:comment xml:lang="en">The road network is understood as a system that consists of various elements, e.g. roads, lanes, intersections.</rdfs:comment>
         <rdfs:label xml:lang="de">Straßennetzelement</rdfs:label>

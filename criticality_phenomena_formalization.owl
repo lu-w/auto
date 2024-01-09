@@ -269,7 +269,7 @@
                     <rdf:Description rdf:about="http://purl.org/auto/perception#Is_Occlusion"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://purl.org/auto/perception#is_occluded"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l1_core#L1_Entität"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.org/auto/l1_core#L1_Entity"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
