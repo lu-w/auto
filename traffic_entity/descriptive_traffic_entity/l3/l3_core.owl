@@ -43,7 +43,7 @@
     <owl:ObjectProperty rdf:about="http://purl.org/auto/l3_core#applies_modification">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l3_core#L3_property"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/l3_core#Modifying_Entity"/>
-        <rdfs:range rdf:resource="http://purl.org/auto/l3_core#Modificiation"/>
+        <rdfs:range rdf:resource="http://purl.org/auto/l3_core#Modification"/>
         <rdfs:label xml:lang="en">A modifying entity can lead to some modification, e.g. closing a lane.</rdfs:label>
         <rdfs:label xml:lang="de">bedingt_modifizierung</rdfs:label>
     </owl:ObjectProperty>
@@ -116,9 +116,9 @@
     
 
 
-    <!-- http://purl.org/auto/l3_core#Modificiation -->
+    <!-- http://purl.org/auto/l3_core#Modification -->
 
-    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modificiation">
+    <owl:Class rdf:about="http://purl.org/auto/l3_core#Modification">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l3_core#L3_Entity"/>
         <rdfs:comment xml:lang="en">A modification that is conducted by some temporary entity, e.g. the modification of closing a lane.</rdfs:comment>
         <rdfs:label xml:lang="de">Modifikation</rdfs:label>

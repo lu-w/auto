@@ -66,9 +66,9 @@
     
 
 
-    <!-- http://purl.org/auto/l5_de#has_elevantion -->
+    <!-- http://purl.org/auto/l5_de#has_elevation -->
 
-    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_elevantion">
+    <owl:DatatypeProperty rdf:about="http://purl.org/auto/l5_de#has_elevation">
         <rdfs:subPropertyOf rdf:resource="http://purl.org/auto/l5_de#sun_data_property"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://purl.org/auto/l5_core#Sun"/>

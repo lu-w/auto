@@ -417,7 +417,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Bitumen_Rapir -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Bitumen_Rapir">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modifications"/>
         <rdfs:comment xml:lang="en">Dark glue material, that is also component of asphalt, used to fix cracks in the surface.</rdfs:comment>
         <rdfs:label xml:lang="de">Bitumenausbesserung</rdfs:label>
     </owl:Class>
@@ -798,7 +798,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Grating -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Grating">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modifications"/>
         <rdfs:comment xml:lang="en">Any kind of grating, mainly used to cover drains.</rdfs:comment>
         <rdfs:label xml:lang="de">Abdeckgitter</rdfs:label>
     </owl:Class>
@@ -1050,7 +1050,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Manholve_Cover -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Manholve_Cover">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modifications"/>
         <rdfs:comment xml:lang="en">A cover for a canal or pipe_mainly made from cast iron.</rdfs:comment>
         <rdfs:label xml:lang="de">Schachtdeckel</rdfs:label>
     </owl:Class>
@@ -1173,7 +1173,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Pothole -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Pothole">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modifications"/>
         <rdfs:comment xml:lang="en">Any type of crack or hole in the upper surface of the road.</rdfs:comment>
         <rdfs:label xml:lang="de">Schlagloch</rdfs:label>
     </owl:Class>
@@ -1581,9 +1581,9 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     
 
 
-    <!-- http://purl.org/auto/l1_de#Road_Surface_Modiciations -->
+    <!-- http://purl.org/auto/l1_de#Road_Surface_Modifications -->
 
-    <owl:Class rdf:about="http://purl.org/auto/l1_de#Road_Surface_Modiciations">
+    <owl:Class rdf:about="http://purl.org/auto/l1_de#Road_Surface_Modifications">
         <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_core#Road_Structure"/>
         <rdfs:comment xml:lang="en">A modification of the mainly present road&apos;s surface.</rdfs:comment>
         <rdfs:label xml:lang="de">Straßenoberflächenmodifikation</rdfs:label>
@@ -1660,7 +1660,7 @@ https://en.wikipedia.org/wiki/Pavement_condition_index</rdfs:comment>
     <!-- http://purl.org/auto/l1_de#Rut -->
 
     <owl:Class rdf:about="http://purl.org/auto/l1_de#Rut">
-        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modiciations"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/auto/l1_de#Road_Surface_Modifications"/>
         <rdfs:comment xml:lang="en">Groove in the road surface caused by frequent use of heavy vehicles. Best visible when rain gathers inside the rut.</rdfs:comment>
         <rdfs:label xml:lang="de">Spurrille</rdfs:label>
     </owl:Class>
